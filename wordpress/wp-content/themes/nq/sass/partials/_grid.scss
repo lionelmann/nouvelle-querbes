@@ -1,0 +1,97 @@
+$total-columns: 7;
+$column-width: 3.5em;
+$gutter-width: 1.5em;
+$grid-padding: $gutter-width;
+$desktop: 55em 15;
+$border-color: #ccc;
+
+@include border-box-sizing;
+
+.container {
+    @include container($total-columns, $desktop);
+    overflow: hidden;
+}
+
+header {
+    @include span-columns(7);
+    @include at-breakpoint($desktop) {
+        @include span-columns(15);
+    }
+}
+
+.logo {
+    @include span-columns(3);
+    @include at-breakpoint($desktop) {
+        @include span-columns(3);
+    }
+}
+
+nav {
+    @include span-columns(3 omega);
+    @include at-breakpoint($desktop) {
+        @include span-columns(12 omega);
+        border: 1px solid $border-color;
+        height: 100px;
+
+    }
+}
+
+aside {
+    @include span-columns(7);
+    @include at-breakpoint($desktop) {
+        @include span-columns(4);
+    }
+}
+
+article {
+    @include span-columns(7);
+    @include at-breakpoint($desktop) {
+        @include span-columns(10 omega);
+        @include suffix(.9);
+    }
+}
+
+section {
+    margin-top: 95px;
+    padding-top: 80px;
+}
+
+footer {
+    @include span-columns(7);
+    @include at-breakpoint($desktop) {
+        @include span-columns(15);
+    }
+}
+
+.columns-wide {
+    @include span-columns(7);
+    @include at-breakpoint($desktop) {
+        @include span-columns(15);
+    }   
+}
+
+.columns-1 {
+    @include span-columns(7);
+    @include at-breakpoint($desktop) {
+        @include span-columns(15);
+        @include pad(2.5,2.5);
+    }   
+}
+
+.columns-2 {
+	@include isolate-grid(7);
+    @include at-breakpoint($desktop) {
+    	@include isolate-grid(7.5);
+    }
+}
+
+.columns-3 {
+	@include isolate-grid(7);
+    margin-top: 3em;
+	@include at-breakpoint($desktop) {
+		@include isolate-grid(5);
+        &:nth-child(2) {
+            @include pad(0,1);
+        }
+	}
+}
