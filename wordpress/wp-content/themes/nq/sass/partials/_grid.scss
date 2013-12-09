@@ -39,7 +39,8 @@ nav {
 aside {
     @include span-columns(7);
     @include at-breakpoint($desktop) {
-        @include span-columns(4);
+        @include span-columns(3 omega);
+        border: 1px solid #ccc;
     }
 }
 
@@ -60,6 +61,17 @@ footer {
     @include span-columns(7);
     @include at-breakpoint($desktop) {
         @include span-columns(15);
+    }
+}
+
+
+.box {
+    @include isolate-grid(7);
+    @include at-breakpoint($desktop) {
+        @include isolate-grid(6);
+        height: 150px;
+        border: 1px solid #ccc;
+        margin-top: 8px;
     }
 }
 
