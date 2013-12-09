@@ -68,12 +68,37 @@ footer {
 .box {
     @include isolate-grid(7);
     @include at-breakpoint($desktop) {
-        @include isolate-grid(6);
+        @include isolate-grid(7.2);
         height: 150px;
         border: 1px solid #ccc;
         margin-top: 8px;
     }
 }
+
+.box-left {
+    @include isolate-grid(7);
+    @include at-breakpoint($desktop) {
+        @include isolate-grid(15);
+        height: 250px;
+        border: 1px solid #ccc;
+        margin-top: 8px;
+    }
+}
+
+.grid-left {
+    @include span-columns(7);
+    @include at-breakpoint($desktop) {
+        @include span-columns(10);
+    }
+}
+
+.grid-right {
+    @include span-columns(7);
+    @include at-breakpoint($desktop) {
+        @include span-columns(5 omega);
+    }
+}
+
 
 .columns-wide {
     @include span-columns(7);

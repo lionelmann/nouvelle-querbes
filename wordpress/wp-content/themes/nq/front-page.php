@@ -30,17 +30,18 @@
 	</div>
 
 	<div class="container">
-		<div class="box">Box</div>
-		<div class="box">Box</div>
-		<div class="box">Box</div>
-		<div class="box">Box</div>
-		<div class="box">Box</div>
+		<div class="grid-left">
+			<div class="box">Notre école</div>
+			<div class="box">La vie à Nouvelle-Querbes</div>
+			<div class="box">Calendrier et communications</div>
+			<div class="box">Implication des parents</div>
+			<div class="box">Le coin des enfants</div>
+		</div>
+		<div class="grid-right">
+			<div class="box-left">Événements à venir</div>
+			<div class="box-left">Courrier du jeudi</div>
+		</div>
 	</div>
-<aside>
-	sidebar
-</aside>
-
-
 
 	<footer>
 		<div class="container">
