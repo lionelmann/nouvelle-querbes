@@ -11,9 +11,45 @@ $desktop: layout(12);
 }
 
 header {
-    margin-bottom: 55px;
     position: relative;
     z-index: 2000;
+    .span-10 {
+        overflow: visible;
+    }
+}
+
+.logo-wrap {
+    position: relative;
+    &.span-4 {
+        overflow: visible;
+    }
+    .logo {
+        left: 0;
+        position: absolute;
+        width: 75%;
+        z-index: 2100;
+    }
+    .search {
+        left: 75%;
+        position: absolute;
+        top: 5px;
+        width: 31px;
+        a {
+            background: url("images/search-icon.png") 0 0 no-repeat;
+            display: block;
+            height: 38px;
+            text-indent: -9999px;
+            width: 31px;
+            &.active {
+                background: url("images/search-icon.png") -31px 0px no-repeat;
+            }
+        }
+    }
+}
+
+#search-box {
+    background: #00ffe0;
+    padding: 20px 0;
 }
 
 .wrapper {
@@ -159,6 +195,7 @@ footer {
 }
 
 .topbar {
-    background-color: #363636;
+    background-color: #000;
     height: 50px;
+    padding: 10px 0 20px;
 }

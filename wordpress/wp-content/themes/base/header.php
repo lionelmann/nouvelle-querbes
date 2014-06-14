@@ -45,6 +45,7 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
         */
+		var template_url = "<?php bloginfo('template_url');?>";
     </script>
 
 </head>
@@ -79,18 +80,25 @@
     <header>
         <div class="topbar">
            <div class="container" >
-                <div class="span-12">
-                    <a href="<?php bloginfo( 'url' ) ?>"><span class="logo">Logo</span></a><span class="sublogo">Tagline</span>
+                <div class="span-10 center">
+					
+					<div class="logo-wrap span-4">
+						<div class="logo">
+							<a href="<?php bloginfo( 'url' ) ?>"><img src="<?php bloginfo('template_url');?>/images/logo.png" /></a>
+						</div>
+						<div class="search">
+							<a href="#">Search</a>
+						</div>
+					</div>
+					<div class="span-8">
+					</div>
                 </div>
                 <div class="menu-btn">Menu &#9776;</div>
             </div>
-            
-            <div id="search">
-                <?php get_search_form() ?>
-            </div>
-        </div>
-        <div class="banner">
-            <h3>Banner</h3> 
-            <h4>Tagline</h4>
         </div>
     </header>
+	<div id="search-box">
+		<div class="span-10 center">
+			<?php get_search_form() ?>
+		</div>
+	</div>
