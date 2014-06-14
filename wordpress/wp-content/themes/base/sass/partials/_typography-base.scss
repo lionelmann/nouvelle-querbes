@@ -5,12 +5,41 @@ $base-font-size: 16px;
 $base-line-height: 24px;
 $round-to-nearest-half-line: true;
 
-/*
 @font-face {
-    font-family: 'cabot';
-    src: url("sass/fonts/cabot.eot?") format("eot"), url("sass/fonts/cabot.woff") format("woff"), url("sass/fonts/cabot.ttf") format("truetype");
+    font-family: 'open_sanslight';
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/open-sans/opensans-light.eot");
+    src: url("sass/fonts/open-sans/opensans-light.eot?#iefix") format("embedded-opentype"), url("sass/fonts/open-sans/opensans-light.woff") format("woff"), url("sass/fonts/open-sans/opensans-light.ttf") format("truetype"), url("sass/fonts/open-sans/opensans-light.svg#open_sanslight") format("svg");
 }
-*/
+
+
+@font-face {
+    font-family: 'open_sansregular';
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/open-sans/opensans-regular-webfont.eot");
+    src: url("sass/fonts/open-sans/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/open-sans/opensans-regular-webfont.woff") format("woff"), url("sass/fonts/open-sans/opensans-regular-webfont.ttf") format("truetype"), url("sass/fonts/open-sans/opensans-regular-webfont.svg#open_sansregular") format("svg");
+}
+
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/open-sans/opensans-semibold-webfont.eot");
+    src: url("sass/fonts/open-sans/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/open-sans/opensans-semibold-webfont.woff") format("woff"), url("sass/fonts/open-sans/opensans-semibold-webfont.ttf") format("truetype"), url("sass/fonts/open-sans/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+}
+
+
+@font-face {
+    font-family: 'open_sansextrabold';
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/open-sans/opensans-extrabold-webfont.eot");
+    src: url("sass/fonts/open-sans/opensans-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("sass/fonts/open-sans/opensans-extrabold-webfont.woff") format("woff"), url("sass/fonts/open-sans/opensans-extrabold-webfont.ttf") format("truetype"), url("sass/fonts/open-sans/opensans-extrabold-webfont.svg#open_sansextrabold") format("svg");
+}
+
 
 // Fonts
 $san-serif: "Lato", sans-serif;
