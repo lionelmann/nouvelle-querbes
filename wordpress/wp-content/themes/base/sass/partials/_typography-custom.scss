@@ -1,1 +1,64 @@
 //Use this partial for classes and project specific custom typography
+.meta {
+    font-family: $san-serif-bold;
+    margin-bottom: 0em;
+}
+
+.events {
+    list-style: none;
+    padding: 0px 0 0;
+    a {
+        text-decoration: none;
+    }
+}
+
+.posts {
+    list-style: none;
+    margin-bottom: 0px;
+    padding: 0px 0 0;
+    h6 {
+        font-family: $san-serif;
+    }
+    li {
+        padding-bottom: 20px;
+        .post-title {
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+        &:last-child {
+            padding-bottom: 0px;
+        }
+    }
+}
+
+.text-align {
+    text-align: center;
+}
+
+.video-icon {
+    margin-top: 50%;
+}
+
+footer {
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+    button {
+        margin-top: 50px;
+    }
+    .footer-right {
+        @include adjust-font-size-to(14px);
+        a {
+            color: $header_link_hover;
+        }
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+        padding-top: 10px;
+        li {
+            text-transform: uppercase;
+        }
+    }
+}

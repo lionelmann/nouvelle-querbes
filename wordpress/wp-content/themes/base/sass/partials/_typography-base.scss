@@ -24,6 +24,15 @@ $round-to-nearest-half-line: true;
 
 
 @font-face {
+    font-family: 'open_sansbold';
+    font-style: normal;
+    font-weight: normal;
+    src: url("sass/fonts/open-sans/opensans-bold.eot");
+    src: url("sass/fonts/open-sans/opensans-bold.eot?#iefix") format("embedded-opentype"), url("sass/fonts/open-sans/opensans-bold.woff") format("woff"), url("sass/fonts/open-sans/opensans-bold.ttf") format("truetype"), url("sass/fonts/open-sans/opensans-bold.svg#open_sansbold") format("svg");
+}
+
+
+@font-face {
     font-family: 'open_sanssemibold';
     font-style: normal;
     font-weight: normal;
@@ -42,9 +51,11 @@ $round-to-nearest-half-line: true;
 
 
 // Fonts
-$san-serif: "Lato", sans-serif;
-$serif: "kepler-std", serif;
-$script: "Grand Hotel";
+$san-serif: "open_sansregular";
+$san-serif-bold: "open_sansbold";
+$san-serif-light: "open_sanslight";
+$san-serif-semibold: "open_sanssemibold";
+$san-serif-extrabold: "open_sansextrabold";
 
 h1 {
     @include adjust-font-size-to(26px);
@@ -98,11 +109,11 @@ h5 {
 
 h6 {
     @include adjust-font-size-to(16px);
-    font-family: $san-serif;
-    margin: 0 auto rhythm(0, 16px);
+    font-family: $san-serif-bold;
+    margin: 0 auto 0.8em;
+    text-transform: uppercase;
     @include susy-breakpoint(55em, $desktop) {
         @include adjust-font-size-to(16px);
-        margin: 0 auto rhythm(0, 16px);
     }
 }
 
@@ -136,33 +147,10 @@ blockquote {
     }
 }
 
-header {
-    & a {
-        text-decoration: none;
-    }
-    & .logo {
-        @include adjust-font-size-to(22px);
-        font-family: $script;
-        @include susy-breakpoint(55em, $desktop) {
-            @include adjust-font-size-to(22px);
-        }
-    }
-    & .sublogo {
-        display: none;
-        @include susy-breakpoint(55em, $desktop) {
-            @include adjust-font-size-to(18px);
-            color: #FFF;
-            display: inline;
-            font-family: $san-serif;
-            margin-left: 10px;
-        }
-    }
-}
-
 a {
     color: white;
     &:hover {
-        color: #67C4A1;
+        color: #00ffb6;
         outline: none;
         text-decoration: none;
     }
@@ -187,7 +175,7 @@ hr {
     text-align: center;
     & h3 {
         @include adjust-font-size-to(30px);
-        font-family: $script;
+        font-family: $san-serif;
         font-weight: 300;
         margin: 0;
         padding-bottom: 0;

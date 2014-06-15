@@ -54,21 +54,17 @@
 
 <!-- Pushy Menu -->
 <nav class="pushy pushy-right">
-    <?php wp_nav_menu();?>        
-    <div class="additional-links">
-        <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-        </ul>  
-    </div>
-    <span class="social-icons">
-        <!--
-        <a href="#" target="_blank"><img alt="youtube icon" src="<?php bloginfo( 'template_url' ) ?>/images/icon-youtube.png"></a>
-        <a href="#" target="_blank"><img alt="pintrest icon" src="<?php bloginfo( 'template_url' ) ?>/images/icon-pintrest.png"></a>
-        <a href="#" target="_blank"><img alt="instagram icon" src="<?php bloginfo( 'template_url' ) ?>/images/icon-instagram.png"></a>
-        -->
-    </span>  
+    <?php 
+		$menu_arg=array(
+			'container' => false,             // remove menu container
+			'container_class' => '',          // class of container
+			'menu_id' => '',
+			'menu' => '',                     // menu name
+			'menu_class' => 'mobile-menu',        // adding custom nav class
+			'theme_location' => 'header-menu',    // where it's located in the theme
+		);
+		wp_nav_menu($menu_arg); 
+	?> 
 </nav>
 
 <!-- Site Overlay for Pushy offcanvas to work -->
@@ -90,7 +86,18 @@
 							<a href="#">Search</a>
 						</div>
 					</div>
-					<div class="span-8">
+					<div class="span-8 overflow-visible">
+					<?php 
+						$menu_arg=array(
+							'container' => false,             // remove menu container
+							'container_class' => '',          // class of container
+							'menu_id' => '',
+							'menu' => '',                     // menu name
+							'menu_class' => 'menu',        // adding custom nav class
+							'theme_location' => 'header-menu',    // where it's located in the theme
+							);
+					
+						wp_nav_menu($menu_arg); ?>
 					</div>
                 </div>
                 <div class="menu-btn">Menu &#9776;</div>
