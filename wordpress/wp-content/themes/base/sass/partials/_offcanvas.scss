@@ -5,11 +5,15 @@
     @include adjust-font-size-to(16px);
     color: $white;
     cursor: pointer;
+    display: block;
     font-family: $san-serif;
     position: absolute;
     right: 25px;
     text-transform: uppercase;
     top: 15px;
+    @include susy-breakpoint(55em, $desktop) {
+        display: none;
+    }
 }
 
 .pushy {
@@ -88,7 +92,7 @@
     bottom: 0;
     display: block;
     position: fixed;
-    right: -13.5em;
+    right: 13.5em;
     top: 0;
     width: 100%;
     z-index: 9999;

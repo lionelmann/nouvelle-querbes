@@ -18,43 +18,16 @@ header {
     }
 }
 
-.logo-wrap {
-    position: relative;
-    &.span-4 {
-        overflow: visible;
-    }
-    .logo {
-        left: 0;
-        position: absolute;
-        width: 75%;
-        z-index: 2100;
-    }
-    .search {
-        left: 75%;
-        position: absolute;
-        top: 5px;
-        width: 31px;
-        a {
-            background: url("images/search-icon.png") 0 0 no-repeat;
-            display: block;
-            height: 38px;
-            text-indent: -9999px;
-            width: 31px;
-            &.active {
-                background: url("images/search-icon.png") -31px 0px no-repeat;
-            }
-        }
-    }
-}
-
 #search-box {
     background: #00ffe0;
+    display: none;
     padding: 20px 0;
 }
 
 .wrapper {
     //margin-top: 10px;
-    //background: rgba(0, 31, 63, 0.7);
+    background: url(images/body-bg.jpg) no-repeat;
+    background-size: cover;
     //position: relative;
     //z-index: 10;
 }
@@ -163,6 +136,13 @@ header {
     margin: 0 auto;
 }
 
+.block-grid-1 {
+    @include gallery(12 of 12);
+    @include susy-breakpoint(55em, $desktop) {
+        @include gallery(12 of 12);
+    }
+}
+
 .block-grid-2 {
     @include gallery(12 of 12);
     &:nth-child(1n + 1) {
@@ -170,6 +150,21 @@ header {
     }
     @include susy-breakpoint(55em, $desktop) {
         @include gallery(3 of 12);
+    }
+}
+
+.block-grid-3 {
+    @include gallery(12 of 12);
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    position: relative;
+    &:nth-child(1n + 1) {
+        clear: both;
+    }
+    @include susy-breakpoint(55em, $desktop) {
+        @include gallery(4 of 12);
+        margin-bottom: 0px;
     }
 }
 
@@ -183,14 +178,15 @@ header {
 }
 
 footer {
-    background-image: url(images/bg-footer.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: #000000;
+    color: $white;
     min-height: 380px;
+    padding-top: 20px;
     position: relative;
-    .footer-top {
-        color: $white;
-        padding-top: 80px;
+    .footer-right {
+        @include susy-breakpoint(55em, $desktop) {
+            padding-right: 0;
+        }
     }
 }
 
@@ -198,4 +194,75 @@ footer {
     background-color: #000;
     height: 50px;
     padding: 10px 0 20px;
+    .span-4 {
+        min-height: 1px;
+        overflow: visible;
+    }
+    .logo {
+        left: 0;
+        position: absolute;
+        width: 75%;
+        z-index: 2100;
+        a {
+            margin-left: 35px;
+            &.active-logo {
+                margin-left: 0px;
+            }
+        }
+    }
+    .search {
+        left: 75%;
+        margin-left: 20px;
+        position: absolute;
+        top: 12px;
+        width: 31px;
+        a {
+            background: url("images/search-icon.png") 0 0 no-repeat;
+            display: block;
+            height: 38px;
+            text-indent: -9999px;
+            width: 31px;
+            &.active {
+                background: url("images/search-icon.png") -31px 0px no-repeat;
+            }
+        }
+    }
+}
+
+.green {
+    background: $green;
+}
+
+.light-green {
+    background: $light-green;
+}
+
+.light-green-2 {
+    background: $light-green-2;
+    @include susy-breakpoint(55em, $desktop) {
+        &:before {
+            background: url(images/blue-arrow.png);
+            content: '';
+            height: 65px;
+            left: 0;
+            position: absolute;
+            top: -65px;
+            width: 100%;
+            z-index: 100;
+        }
+    }
+}
+
+.overflow-visible {
+    overflow: visible;
+}
+
+.box {
+    padding: 25px 15px 50px;
+    position: relative;
+}
+
+.content {
+    background: $white;
+    padding: 10px 20px 120px;
 }

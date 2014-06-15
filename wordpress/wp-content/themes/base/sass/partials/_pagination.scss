@@ -31,17 +31,26 @@
     }
 }
 
-.back {
-    margin-top: 10px;
-    margin-top: 30px;
-    text-align: center;
+.read-more {
+    background: url(images/read-more.png) no-repeat;
+    bottom: 10px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    text-indent: -9999px;
+    width: 32px;
+}
+
+.back-to-top {
+    position: relative;
     a {
-        @include adjust-font-size-to(20px);
-        color: #67C4A1;
-        font-family: $san-serif;
-        font-weight: bold;
-        text-decoration: none;
-        text-transform: uppercase;
+        background: url(images/back-to-top.png) no-repeat;
+        height: 49px;
+        position: absolute;
+        right: -65px;
+        text-indent: -9999px;
+        top: -69px;
+        width: 51px;
     }
 }
 

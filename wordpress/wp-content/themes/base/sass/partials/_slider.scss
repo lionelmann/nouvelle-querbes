@@ -1,0 +1,98 @@
+.slider {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bx-wrapper {
+
+    *zoom: 1;
+    margin: 60px auto 60px;
+    padding: 0px 0 30px;
+    position: relative;
+    @include susy-breakpoint(55em, $desktop) {
+        border-bottom: 30px solid #fff;
+        padding: 0px 0 0;
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+    .bx-viewport {
+        /*fix other elements on the page moving (on Chrome)*/
+        left: 0px;
+        transform: translatez(0);
+    }
+    /* IMAGE CAPTIONS */
+    .bx-caption {
+
+        @include adjust-font-size-to(16px);
+        background: #000000;
+        bottom: 0px;
+        color: #fff;
+        font-family: $san-serif-extrabold;
+        left: 0;
+        padding: 9px 30px 8px 20px;
+        position: absolute;
+        text-transform: uppercase;
+        width: auto;
+        @include susy-breakpoint(55em, $desktop) {
+            @include adjust-font-size-to(18px);
+            bottom: 30px;
+        }
+        &:after {
+            border-bottom: 20px solid transparent;
+            border-left: 20px solid #000;
+            border-top: 20px solid transparent;
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 0;
+        }
+    }
+    .bx-controls-auto {
+        bottom: -30px;
+        position: absolute;
+        width: 100%;
+    }
+    .bx-loading {
+        background: url(images/bx_loader.gif) center center no-repeat white;
+        height: 100%;
+        left: 0;
+        min-height: 50px;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2000;
+    }
+    .bx-prev {
+        background: url(images/banner-arrow.png) no-repeat 0 0;
+        left: -20px;
+        &:hover {
+            background-position: 0 0px;
+        }
+    }
+    .bx-next {
+        background: url(images/banner-arrow.png) no-repeat -122px 0px;
+        right: -20px;
+        &:hover {
+            background-position: -122px 0px;
+        }
+    }
+    & .bx-controls-direction a {
+
+        height: 121px;
+        margin-top: -40px;
+        outline: 0;
+        position: absolute;
+        text-indent: -9999px;
+        top: 40%;
+        width: 78px;
+        z-index: 9999;
+        @include susy-breakpoint(55em, $desktop) {
+            margin-top: -16px;
+        }
+        &.disabled {
+            display: none;
+        }
+    }
+}
