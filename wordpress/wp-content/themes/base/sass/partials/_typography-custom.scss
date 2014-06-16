@@ -1,4 +1,11 @@
 //Use this partial for classes and project specific custom typography
+.headline {
+    font-family: $san-serif-extrabold;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    text-transform: uppercase;
+}
+
 .meta {
     font-family: $san-serif-bold;
     margin-bottom: 0em;
