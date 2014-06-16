@@ -71,7 +71,7 @@
 				<?php endif; wp_reset_query(); ?>
 			</div>
 		</section>
-		<section class="span-10 center overflow-visible">
+		<section class="span-10 video-section center overflow-visible">
 			<?php query_posts('post_type=page&p=217&showposts=1');
 				if(have_posts()): while(have_posts()):the_post();
 			?>
@@ -85,7 +85,7 @@
 			</div>
 			<div class="block-grid-3 text-align">
 				<div class="video-icon">
-					<img src="<?php bloginfo('template_url');?>/images/video-icon.png">
+					<a href="https://www.youtube.com/watch?v=p7rBZhrlxQw" rel="prettyPhoto"><img src="<?php bloginfo('template_url');?>/images/video-icon.png"></a>
 					<h6>LANCER LA VIDÉO</h6>
 				</div>
 			</div>

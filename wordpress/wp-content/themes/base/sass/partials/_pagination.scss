@@ -47,10 +47,13 @@
         background: url(images/back-to-top.png) no-repeat;
         height: 49px;
         position: absolute;
-        right: -65px;
+        right: 0px;
         text-indent: -9999px;
         top: -69px;
         width: 51px;
+        @include susy-breakpoint(55em, $desktop) {
+            right: -65px;
+        }
     }
 }
 
