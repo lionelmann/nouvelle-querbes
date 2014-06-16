@@ -15,7 +15,7 @@
     <?php } ?>
     <div class="container">
         <section class="span-10 center">
-            <?php the_title( '<h1>', '</h1>' ); ?>
+            <?php the_title( '<h4 class="headline">', '</h4>' ); ?>
         </section>
 		<section class="span-10 center overflow-visible">
 				<div class="span-7 content">
