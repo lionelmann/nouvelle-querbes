@@ -22,6 +22,8 @@ header {
     background: #00ffe0;
     display: none;
     padding: 20px 0;
+    position: absolute;
+    z-index: 1000;
 }
 
 .wrapper {
@@ -207,6 +209,12 @@ footer {
         z-index: 2100;
         a {
             margin-left: 35px;
+            .page & {
+                margin-left: 0px;
+            }
+            .single & {
+                margin-left: 0px;
+            }
             &.active-logo {
                 margin-left: 0px;
             }
@@ -243,14 +251,19 @@ footer {
     background: $light-green-2;
     @include susy-breakpoint(55em, $desktop) {
         &:before {
-            background: url(images/blue-arrow.png);
+            background: url(images/sidebar-blue-arrow.png);
             content: '';
-            height: 65px;
+            height: 47px;
             left: 0;
             position: absolute;
-            top: -65px;
+            top: -31px;
             width: 100%;
             z-index: 100;
+            .home & {
+                background: url(images/blue-arrow.png);
+                height: 65px;
+                top: -65px;
+            }
         }
     }
 }
@@ -265,6 +278,21 @@ footer {
 }
 
 .content {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.white-bg {
     background: $white;
-    padding: 10px 20px 120px;
+    margin-bottom: 20px;
+    padding: 10px 20px 30px;
+    &:last-child {
+        margin-bottom: 100px;
+    }
+}
+
+.sidebar {
+    & .box:last-child {
+        margin-bottom: 60px;
+    }
 }
