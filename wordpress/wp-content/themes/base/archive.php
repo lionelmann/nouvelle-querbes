@@ -4,6 +4,7 @@ Template Name: Blog Archive
 */
 
 get_header(); ?>
+<?php get_template_part( 'template-part', 'breadcrumb' ); ?>
 <div class="container">
 		<div class="span-10 center overflow-visible content">
 			<div class="span-7">
