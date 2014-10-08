@@ -86,7 +86,7 @@
 							<a href="#">Search</a>
 						</div> -->
 					</div>
-					<div class="span-9 overflow-visible">
+					<div class="span-10 overflow-visible">
 					<?php 
 						$menu_arg=array(
 							'container' => false,             // remove menu container
