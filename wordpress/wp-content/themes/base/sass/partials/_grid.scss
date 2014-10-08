@@ -39,7 +39,7 @@ header {
     //overflow: hidden;
     //position: relative;
     @include susy-breakpoint(55em, $desktop) {
-        @include span(6);
+        @include span(2);
     }
 }
 
@@ -194,12 +194,12 @@ footer {
     background-color: #000;
     height: 60px;
     padding: 10px 0 25px;
-    .span-4 {
+    .span-2 {
         min-height: 1px;
         overflow: visible;
         width: 70%;
         @include susy-breakpoint(55em, $desktop) {
-            width: 25%;
+            width: 16.66667%;
         }
     }
     .logo {
@@ -208,7 +208,7 @@ footer {
         width: 75%;
         z-index: 2100;
         a {
-            margin-left: 35px;
+            margin-left: 30px;
             .page & {
                 margin-left: 0px;
             }
