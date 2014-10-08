@@ -78,15 +78,15 @@
            <div class="container" >
                 <div class="span-10 center">
 					
-					<div class="logo-wrap span-4">
+					<div class="logo-wrap span-2">
 						<div class="logo">
 							<a href="<?php bloginfo( 'url' ) ?>"><img src="<?php bloginfo('template_url');?>/images/logo.png" /></a>
 						</div>
-						<div class="search">
+						<!--<div class="search">
 							<a href="#">Search</a>
-						</div>
+						</div> -->
 					</div>
-					<div class="span-8 overflow-visible">
+					<div class="span-10 overflow-visible">
 					<?php 
 						$menu_arg=array(
 							'container' => false,             // remove menu container
