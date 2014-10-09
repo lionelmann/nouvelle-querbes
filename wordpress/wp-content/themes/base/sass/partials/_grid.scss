@@ -5,9 +5,9 @@ $susy: (columns: 6, gutters: 1, gutter-position: inside);
 $desktop: layout(12);
 
 .container {
+    @include container(80em);
     //border: 1px solid red;
     position: relative;
-    @include container(80em);
 }
 
 header {
@@ -27,9 +27,9 @@ header {
 }
 
 .wrapper {
+    background-size: cover;
     //margin-top: 10px;
     background: url(images/body-bg.jpg) no-repeat;
-    background-size: cover;
     //position: relative;
     //z-index: 10;
 }

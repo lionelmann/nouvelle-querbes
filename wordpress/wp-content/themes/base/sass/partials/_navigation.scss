@@ -15,7 +15,7 @@
     li {
         display: block;
         float: left;
-        margin-right: 20px;
+        margin-right: 10px;
         max-width: 120px;
         min-width: 30px;
         padding: 0 30px 0 0;
@@ -97,9 +97,9 @@
 }
 
 .menu li:hover ul, .menu li.onhover ul {
+    left: -20px;
     /*Use this property to change offset of the dropdown*/
     top: auto;
-    left: -20px;
 }
 
 .menu li:hover ul ul, .menu li:hover ul ul ul, .menu li:hover ul ul ul ul,
