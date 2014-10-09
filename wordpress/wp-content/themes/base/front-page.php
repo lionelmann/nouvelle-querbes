@@ -63,7 +63,7 @@
 						<?php while(have_posts()):the_post(); ?>
 							<li>
 								<?php the_title('<p class="post-title">','</p>');?>
-								<?php echo get_excerpt(200); ?>
+								<?php echo the_content(); ?>
 							</li>
 						<?php endwhile; ?>
 					</ul>

@@ -7,7 +7,7 @@
             // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
             var mapOptions = {
                 zoom: 16,
-                center: new google.maps.LatLng(45.538776, -73.618085,17),
+                center: new google.maps.LatLng(45.5172539, -73.6005289,17),
 
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
 				zoomControl: false,
@@ -127,7 +127,7 @@
 
             // Add Marker
             var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(45.537776, -73.618085,17),
+                position: new google.maps.LatLng(45.5172539, -73.6005289,17),
                 map: map,
                 icon: image // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
 
