@@ -28,4 +28,27 @@ function gdrive_shortcode_pdf( $atts, $content = null ) {
 add_shortcode( 'gdrive_pdf', 'gdrive_shortcode_pdf' );
 
 
+
+
+
+function journal_shortcode( $atts ) {
+
+	// Attributes
+	extract( shortcode_atts(
+		array(
+			'repertoire' => '',
+			'fichier' => '',
+		), $atts )
+	);
+
+	// Code
+return "<a target='_blank' href='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".pdf'><img src ='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".jpg'></a>";
+
+
+}
+add_shortcode( 'journal', 'journal_shortcode' );
+
+
+
+
 ?>
