@@ -15,8 +15,7 @@ var gulp 		= require('gulp'),
 	cache 		= require('gulp-cached'),
 	livereload 	= require('gulp-livereload'),
 	notify 		= require('gulp-notify'),
-	jshint 		= require('gulp-jshint'),
-	bower 		= require('gulp-bower');
+	jshint 		= require('gulp-jshint');
 
 // Create custom variables to make life easier
 var outputDir = 'dist';
@@ -28,18 +27,17 @@ var scriptList = [
 	'src/components/jquery-viewport-checker/src/jquery.viewportchecker.js',
 	//'src/components/mixitup2/src/jquery.mixitup.js',
 	'src/components/viewport-units-buggyfill/viewport-units-buggyfill.js',
-	'src/js/custom/bigSlide.js',
+	'src/js/custom/bigSlide.js'
 	//'src/js/custom/mixitup-call.js'
 ];
 
 var fontIcons = [
 	'src/components/fontawesome/fonts/**.*', 
-	'src/components/monosocialiconsfont/MonoSocialIconsFont*.*'
+	'src/components/monosocialiconsfont/MonoSocialIconsFont*.*',
+	'src/sass/fonts/open-sans/**.*'
 ];
 
-var sassOptions = {
-	style: 'compressed'
-};
+var sassOptions = {style: 'compressed'};
 
 // Create image minification task
 gulp.task('imagemin', function () {
@@ -66,26 +64,21 @@ gulp.task('js', function() {
     	.pipe(notify("js task finished"));
 });
 
-
 // Create sass compile task
 gulp.task('sass', function() {
-	return gulp.src('src/sass/style.scss')
-		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
-		.pipe(sass(sassOptions))
-		.pipe(gulp.dest(outputDir + '/css'))
-		.pipe(livereload())
-		.pipe(notify("sass task finished"));
-}); 
+    return sass('src/sass/style.scss', sassOptions) 
+    .on('error', function (err) {
+      console.error('Error!', err.message);
+   })
+    .pipe(gulp.dest(''))
+    .pipe(livereload())
+    .pipe(notify("sass task finished"));
+});
 
 // Create fonticons compile task
 gulp.task('icons', function() { 
     return gulp.src(fontIcons) 
         .pipe(gulp.dest(outputDir + '/fonts')); 
-});
-
-// Create bower update and install task
-gulp.task('bower', function() {
-  	return bower();
 });
 
 // Create watch task
@@ -98,4 +91,4 @@ gulp.task('watch', function() {
 });
 
 // Create default task so you can gulp whenever you don't want to watch
-gulp.task('default', ['js', 'sass', 'imagemin', 'icons', 'bower', 'watch']);
+gulp.task('default', ['js', 'sass', 'imagemin', 'icons']);

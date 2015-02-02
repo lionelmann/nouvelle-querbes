@@ -1,0 +1,107 @@
+// Typography
+/* 
+http://drinchev.github.io/monosocialiconsfont/
+*/
+
+// Icon Fonts
+$icon-font: "Mono Social Icons Font";
+
+// Fonts
+$sans-serif: "grafolita-script",sans-serif;
+$serif: "museo-slab",serif;
+
+// Base Fonts
+$base-font-family: $serif;
+$header-font-family: $serif;
+
+// Base Sizes
+$base-font-size: 1em;
+$base-line-height: $base-font-size * 1.5;
+$unitless-line-height: $base-line-height / ($base-line-height * 0 + 1);
+
+// Modular Scale
+$modular-scale-ratio: $major-third;
+$modular-scale-base: 1em;
+
+// Strip units from line-height: https://developer.mozilla.org/en-US/docs/Web/CSS/line-height#Prefer_unitless_numbers_for_line-height_values
+$header-line-height: $base-font-size * 1.25;
+$base-border-radius: em(3);
+
+// Colors
+$orange:		rgba(224,112,30, 1);
+$white: 		rgba(255, 255, 255, 1);
+$black: 		rgba(0, 0, 0, 1);
+$yellow: 		rgba(255, 221, 34, 1);
+$blue: 			rgba(71, 125, 202, 1);
+$dark-gray: 	rgba(51, 51, 51, 1);
+$light-gray:	rgba(242, 242, 242, 1);
+$light-yellow: 	rgba(255, 246, 191, 1);
+$light-red: 	rgba(251, 227, 228, 1);
+$light-green: 	rgba(230, 239, 194, 1);
+
+// Background Color
+$base-background-color: $white;
+$footer-background-color: $orange;
+$header-background-color: $black;
+
+// Font Colors
+$footer-text-color: $white;
+$base-font-color: $dark-gray;
+$base-accent-color: $blue;
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-accent-color, 15);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Border color
+$base-border-color: $light-gray;
+
+// Flash Colors
+$alert-color: $light-yellow;
+$error-color: $light-red;
+$notice-color: $light-yellow;
+$success-color: $light-green;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-border-radius: $base-border-radius;
+$form-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+$form-font-size: 2em;
+$form-font-family: $base-font-family;
+
+
+// =============================================================================
+//  RATIOS
+// =============================================================================
+
+// =============================================================================
+//  COLOURS
+// =============================================================================
+
+$color--primary-dark: #7B1FA2;
+$color--primary: #9C27B0;
+$color--primary-light: #E1BEE7;
+
+$color--text-primary: #212121; // also for icons
+$color--text-secondary: #727272;
+$color--divider: #B6B6B6;
+
+$color--accent: #CDDC39;
+
+// =============================================================================
+//  FONTS
+// =============================================================================
+
+$font-family--primary: "Roboto", sans-serif;
+
+$font-size--small: 16px;
+$font-size--medium: 22px;
+$font-size--large: 36px;
+
+$line-height--small: 1;
+$line-height--medium: 1.6;

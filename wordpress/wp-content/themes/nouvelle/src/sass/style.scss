@@ -1,1 +1,35 @@
-@import "partials/settings";
+/*!
+Theme Name: Nouvelle
+Theme URI: http://wordpress.org/
+Description: The 2014 default theme for WordPress.
+Author: Lionel Mann
+Author URI: http://wordpress.org/
+Version: 1.0
+*/
+
+// Library
+@import "../components/normalize-scss/normalize";
+@import "../components/bourbon/app/assets/stylesheets/bourbon";
+
+//Neat Settings -- uncomment if using Neat -- must be imported before Neat
+@import "layout/grid-settings";
+@import "../components/neat/app/assets/stylesheets/neat";
+
+@import "helpers/colors.scss";
+
+@import "base/typography.scss";
+@import "base/wp-core.scss";
+
+@import "layout/grid";
+@import "layout/form";
+@import "layout/navigation";
+
+@import "components/banner";
+@import "components/breadcrumb";
+@import "components/button";
+@import "components/map";
+@import "components/pagination";
+@import "components/search";
+@import "components/slider";
+@import "components/social-share";
+

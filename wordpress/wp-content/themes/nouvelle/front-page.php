@@ -10,7 +10,7 @@
 					while(have_posts()):the_post();
 						$slide_img = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 						if(!$slide_img) {
-							$slide_img = get_bloginfo('template_url')."/images/no-image.jpg";
+							$slide_img = get_bloginfo('template_url')."/dist/images/no-image.jpg";
 						}
 					?>
                     <li>
@@ -85,7 +85,7 @@
 			</div>
 			<div class="block-grid-3 text-align">
 				<div class="video-icon">
-					<a href="https://www.youtube.com/watch?v=p7rBZhrlxQw" rel="prettyPhoto"><img src="<?php bloginfo('template_url');?>/images/video-icon.png"></a>
+					<a href="https://www.youtube.com/watch?v=p7rBZhrlxQw" rel="prettyPhoto"><img src="<?php bloginfo('template_url');?>/dist/images/video-icon.png"></a>
 					<h6>LANCER LA VIDÉO</h6>
 				</div>
 			</div>

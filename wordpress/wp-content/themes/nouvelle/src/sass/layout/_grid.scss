@@ -1,0 +1,275 @@
+.container {
+    @include outer-container;
+    position: relative;
+}
+
+header {
+    position: relative;
+    z-index: 2000;
+    .span-10 {
+        overflow: visible;
+    }
+}
+
+#search-box {
+    background: #00ffe0;
+    display: none;
+    padding: 20px 0;
+    position: absolute;
+    z-index: 1000;
+}
+
+.wrapper {
+    background-size: cover;
+    background: url(dist/images/body-bg.jpg) no-repeat;
+}
+
+.span-2 {
+    @include media($bp-large) {
+        @include span-columns(2);
+    }
+}
+
+.span-3 {
+    overflow: hidden;
+    position: relative;
+    @include media($bp-large) {
+        @include span-columns(4);
+    }
+}
+
+.span-4 {
+    overflow: hidden;
+    position: relative;
+    @include media($bp-large) {
+        @include span-columns(3);
+    }
+}
+
+.span-5 {
+    overflow: hidden;
+    position: relative;
+    @include media($bp-large) {
+        @include span-columns(5);
+    }
+}
+
+.span-6 {
+    overflow: hidden;
+    position: relative;
+    @include media($bp-large) {
+        @include span-columns(6);
+    }
+}
+
+.span-7 {
+    overflow: hidden;
+    position: relative;
+    @include media($bp-large) {
+        @include span-columns(7);
+    }
+}
+
+.span-8 {
+    overflow: hidden;
+    position: relative;
+    @include media($bp-large) {
+        @include span-columns(8);
+    }
+}
+
+.span-9 {
+    overflow: hidden;
+    position: relative;
+    @include media($bp-large) {
+        @include span-columns(9);
+    }
+}
+
+.span-10 {
+    overflow: hidden;
+    position: relative;
+    @include media($bp-large) {
+        @include span-columns(10);
+    }
+}
+
+.span-11 {
+    overflow: hidden;
+    position: relative;
+    @include media($bp-large) {
+        @include span-columns(11);
+    }
+}
+
+.span-12 {
+    overflow: hidden;
+    position: relative;
+    @include media($bp-large) {
+        @include span-columns(12);
+    }
+}
+
+.center {
+    float: none;
+    margin: 0 auto;
+}
+
+.block-grid-1 {
+    @include span-columns(12 of 12);
+    @include media($bp-large) {
+        @include span-columns(12 of 12);
+    }
+}
+
+.block-grid-2 {
+    @include span-columns(12 of 12);
+    &:nth-child(1n + 1) {
+        clear: both;
+    }
+    @include media($bp-large) {
+        @include span-columns(3 of 12);
+    }
+}
+
+.block-grid-3 {
+    @include span-columns(12 of 12);
+    padding-bottom: 25px;
+    padding-top: 25px;
+    position: relative;
+    &:nth-child(1n + 1) {
+        clear: both;
+    }
+    @include media($bp-large) {
+        @include span-columns(4 of 12);
+    }
+}
+
+.banner {
+    background-color: #f5f5f6;
+    background-image: url(dist/images/bg-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 312px;
+    position: relative;
+}
+
+footer {
+    background: #000000;
+    color: $white;
+    min-height: 380px;
+    padding-top: 20px;
+    position: relative;
+    .footer-right {
+        @include media($bp-large) {
+            padding-right: 0;
+        }
+    }
+}
+
+.topbar {
+    background-color: #000;
+    height: 60px;
+    padding: 10px 0 25px;
+    .span-2 {
+        min-height: 1px;
+        overflow: visible;
+        width: 70%;
+        @include media($bp-large) {
+            width: 16.66667%;
+        }
+    }
+    .logo {
+        left: 0;
+        position: absolute;
+        width: 75%;
+        z-index: 2100;
+        a {
+            margin-left: 30px;
+            .page & {
+                margin-left: 0px;
+            }
+            .single & {
+                margin-left: 0px;
+            }
+            &.active-logo {
+                margin-left: 0px;
+            }
+        }
+    }
+    .search {
+        left: 75%;
+        margin-left: 20px;
+        position: absolute;
+        top: 12px;
+        width: 31px;
+        a {
+            background: url("dist/images/search-icon.png") 0 0 no-repeat;
+            display: block;
+            height: 38px;
+            text-indent: -9999px;
+            width: 31px;
+            &.active {
+                background: url("dist/images/search-icon.png") -31px 0px no-repeat;
+            }
+        }
+    }
+}
+
+.green {
+    background: $green;
+}
+
+.light-green {
+    background: $light-green;
+}
+
+.light-green-2 {
+    background: $light-green-2;
+    @include media($bp-large) {
+        &:before {
+            background: url(dist/images/sidebar-blue-arrow.png);
+            content: '';
+            height: 47px;
+            left: 0;
+            position: absolute;
+            top: -31px;
+            width: 100%;
+            z-index: 100;
+            .home & {
+                background: url(dist/images/blue-arrow.png);
+                height: 65px;
+                top: -65px;
+            }
+        }
+    }
+}
+
+.overflow-visible {
+    overflow: visible;
+}
+
+.box {
+    padding: 25px 15px 50px;
+    position: relative;
+}
+
+.content {
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.white-bg {
+    background: $white;
+    margin-bottom: 20px;
+    padding: 10px 20px 30px;
+    &:last-child {
+        margin-bottom: 100px;
+    }
+}
+
+.sidebar {
+    & .box:last-child {
+        margin-bottom: 60px;
+    }
+}

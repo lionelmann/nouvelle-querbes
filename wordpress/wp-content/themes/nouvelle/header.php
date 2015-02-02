@@ -25,26 +25,6 @@
     <?php wp_head(); ?>
     
     <script type="text/javascript">
-        /*Typekit
-        (function() {
-        var config = {
-        kitId: 'set7rcj',
-        scriptTimeout: 3000
-        };
-        var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-        })();
-
-        /*Google Analytics
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-1322597-2']);
-        _gaq.push(['_trackPageview']);
-
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-        */
 		var template_url = "<?php bloginfo('template_url');?>";
     </script>
 
@@ -80,7 +60,7 @@
 					
 					<div class="logo-wrap span-2">
 						<div class="logo">
-							<a href="<?php bloginfo( 'url' ) ?>"><img src="<?php bloginfo('template_url');?>/images/logo.png" /></a>
+							<a href="<?php bloginfo( 'url' ) ?>"><img src="<?php bloginfo('template_url');?>/dist/images/logo.png" /></a>
 						</div>
 						<!--<div class="search">
 							<a href="#">Search</a>

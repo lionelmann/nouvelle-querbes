@@ -5,7 +5,7 @@
 		</div>
 		<div class="span-10 center">
 			<div class="span-4">
-				<img src="<?php bloginfo('template_url');?>/images/ecole-logo.png">
+				<img src="<?php bloginfo('template_url');?>/dist/images/ecole-logo.png">
 			</div>
 			<div class="span-9 footer-right">
 				<div id="map"></div>
