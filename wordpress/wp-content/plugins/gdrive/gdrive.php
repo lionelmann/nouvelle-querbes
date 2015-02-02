@@ -43,7 +43,7 @@ function journal_shortcode( $atts ) {
 	);
 
 	// Code
-return "<figure><a target='_blank' href='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".pdf'><img src ='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".jpg'></a><figcaption>".$texte."</figcaption></figure>";
+return "<a target='_blank' href='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".pdf'><img title='".$texte."' src ='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".jpg'></a>";
 
 
 }
