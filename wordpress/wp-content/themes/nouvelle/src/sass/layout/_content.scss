@@ -1,0 +1,18 @@
+section[role=main] {
+    @include outer-container;
+    @include pad(0 2em 0 2em);
+    @include media($bp-large) {
+        @include pad(default);
+    }
+
+    article {
+        @include media($bp-large) {
+            @include span-columns(8);
+        }
+        .article-inside {
+            background-color: $white;
+            padding: 1em 2em 1em 2em;
+            margin-bottom: 2em;
+        }
+    }
+}

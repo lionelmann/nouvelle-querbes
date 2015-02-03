@@ -1,20 +1,18 @@
-<?php get_header('inner'); ?>
+<?php get_header(); ?>
 <?php get_template_part( 'template-part', 'breadcrumb' ); ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-    <div class="container">
-		<section class="span-10 center overflow-visible content">
-				<div class="span-7">
-					<?php the_title( '<h4 class="headline">', '</h4>' ); ?>
-					<div class="white-bg">
-					<?php the_content();?>
-					</div>
-				</div>
-				<div class="span-5 overflow-visible sidebar">
-					<?php get_sidebar();?>
-				</div>
-		</section>
-    </div>
+<section role="main">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<article>	
+			<?php the_title( '<h4 class="headline">', '</h4>' ); ?>
+			<div class="article-inside">
+				<?php the_content();?>
+			</div>
+		</article>
+	<?php endwhile; endif; ?>
+	<aside>
+		<?php get_sidebar();?>
+	</aside>
+</section>
 
-<?php endwhile; endif; ?>
 <?php get_footer(); ?>

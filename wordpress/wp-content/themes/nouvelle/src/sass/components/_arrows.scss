@@ -1,0 +1,20 @@
+.arrows {
+    position: relative;
+    @include media($bp-large) {
+        &:before {
+            background: url(dist/images/sidebar-blue-arrow.png);
+            content: '';
+            height: 47px;
+            left: 0;
+            position: absolute;
+            top: -31px;
+            width: 100%;
+            z-index: 100;
+            .home & {
+                background: url(dist/images/blue-arrow.png);
+                height: 65px;
+                top: -65px;
+            }
+        }
+    }
+}

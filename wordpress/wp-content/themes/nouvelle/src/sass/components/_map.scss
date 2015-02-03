@@ -1,9 +1,8 @@
 #map {
     height: 250px;
-    margin-bottom: 30px;
-    margin-top: 50px;
     width: 100%;
     @include media($bp-large) {
-        margin-top: 0;
+        margin: 0;
+        padding: 0;
     }
 }

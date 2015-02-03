@@ -1,9 +1,18 @@
 <?php get_header(); ?>
+<?php get_template_part( 'template-part', 'breadcrumb' ); ?>
 
-<div class="container">
-	<section class="span-12">
-		<h1>404</h1>
-	</section>
-</div>
+<section role="main">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<article>	
+			<?php the_title( '<h4 class="headline">', '</h4>' ); ?>
+			<div class="article-inside">
+				<p>404</p>
+			</div>
+		</article>
+	<?php endwhile; endif; ?>
+	<aside>
+		<?php get_sidebar();?>
+	</aside>
+</section>
 
 <?php get_footer(); ?>

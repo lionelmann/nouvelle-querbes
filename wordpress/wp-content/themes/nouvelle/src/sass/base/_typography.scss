@@ -9,15 +9,14 @@ $round-to-nearest-half-line: true;
 @include font-face(open_sanssemibold, 'dist/fonts/opensans-semibold-webfont', normal, normal);
 @include font-face(open_sansextrabold, 'dist/fonts/opensans-extrabold-webfont', normal, normal);
 
-
-
-
 // Fonts
 $san-serif: "open_sansregular";
 $san-serif-bold: "open_sansbold";
 $san-serif-light: "open_sanslight";
 $san-serif-semibold: "open_sanssemibold";
 $san-serif-extrabold: "open_sansextrabold";
+
+
 
 h1 {
     //@include adjust-font-size-to(26px);
@@ -110,20 +109,11 @@ blockquote {
 }
 
 a {
-    color: white;
+    //color: white;
     &:hover {
         color: #00ffb6;
         outline: none;
         text-decoration: none;
-    }
-    &:active {
-        outline: none;
-    }
-    &:focus {
-        outline: none;
-    }
-    .content-wrapper & {
-        color: #67C4A1;
     }
 }
 
@@ -131,41 +121,6 @@ hr {
     //border-color: $body_bg;
     margin-bottom: 50px;
     margin-top: 60px;
-}
-
-.banner {
-    text-align: center;
-    & h3 {
-        //@include adjust-font-size-to(30px);
-        font-family: $san-serif;
-        font-weight: 300;
-        margin: 0;
-        padding-bottom: 0;
-        padding-top: 2em;
-        @include media($bp-large) {
-            //@include adjust-font-size-to(44px);
-        }
-    }
-    & h4 {
-        //@include adjust-font-size-to(40px);
-        font-family: $san-serif;
-        margin: 20px 0 0 0;
-        text-transform: uppercase;
-        @include media($bp-large) {
-            //include adjust-font-size-to(95px);
-        }
-    }
-}
-
-//Use this partial for classes and project specific custom typography
-.post {
-    a {
-        color: #000;
-        text-decoration: none;
-    }
-    .meta {
-        margin-bottom: 0.5em;
-    }
 }
 
 .headline {
@@ -188,58 +143,20 @@ hr {
     margin-bottom: 0em;
 }
 
-.events {
-    list-style: none;
-    padding: 0px 0 0;
-    a {
-        text-decoration: none;
-    }
-}
-
-.posts {
-    list-style: none;
-    margin-bottom: 0px;
-    padding: 0px 0 50px;
-    h6 {
-        font-family: $san-serif;
-    }
-    li {
-        padding-bottom: 20px;
-        .post-title {
-            margin-bottom: 0;
-            text-transform: uppercase;
-        }
-    }
-}
-
-.text-align {
-    text-align: center;
-}
-
 .video-icon {
     margin-top: 50%;
 }
 
 footer {
     a {
-        color: $white;
+        color: $header_link_hover;
         text-decoration: none;
-    }
-    button {
-        margin-top: 50px;
-    }
-    .footer-right {
-        //@include adjust-font-size-to(14px);
-        a {
-            color: $header_link_hover;
+        &:hover {
+            color: $white;
         }
     }
     ul {
         list-style: none;
         padding-left: 0;
-        padding-top: 10px;
-        li {
-            text-transform: uppercase;
-        }
     }
 }

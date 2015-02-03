@@ -1,0 +1,29 @@
+.columns {
+    @include outer-container;
+    .content {
+        @include media($bp-large) {
+            @include span-columns(4, table);
+            &:nth-of-type(2) {
+                @include span-columns(4, table);
+            }
+            &:nth-of-type(3) {
+                @include span-columns(4, table);  
+            }
+        }
+    }
+}
+
+.video-container {
+    @include outer-container;
+    .content {
+        @include media($bp-large) {
+            @include span-columns(4);
+            &:nth-of-type(2) {   
+                @include span-columns(4);
+            }
+            &:nth-of-type(3) {
+                @include span-columns(4);  
+            }
+        }
+    }
+}

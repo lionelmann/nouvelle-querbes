@@ -1,0 +1,21 @@
+section[role=banner] {
+    height: 60px;
+    width: 100%;
+    background-color: #000000; //$header-background-color;
+    header {
+        @include outer-container;
+        position: relative;
+        z-index: 2000;
+        .logo {
+            @include span-columns(2 of 12);
+            z-index: 2100;
+            &:hover {
+                opacity: 0.8;
+            }
+            @include media($bp-large) {
+                padding: 1em 0 0 1em;
+            }
+        }
+    }
+}
+

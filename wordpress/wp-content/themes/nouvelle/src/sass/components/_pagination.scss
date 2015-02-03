@@ -31,32 +31,6 @@
     }
 }
 
-.read-more {
-    background: url(dist/images/read-more.png) no-repeat;
-    bottom: 10px;
-    height: 20px;
-    position: absolute;
-    right: 20px;
-    text-indent: -9999px;
-    width: 32px;
-}
-
-.back-to-top {
-    position: relative;
-    a {
-        background: url(dist/images/back-to-top.png) no-repeat;
-        height: 49px;
-        position: absolute;
-        right: 0px;
-        text-indent: -9999px;
-        top: -69px;
-        width: 51px;
-        @include media($bp-large) {
-            right: -65px;
-        }
-    }
-}
-
 .mobile-pagination {
 
     display: block;

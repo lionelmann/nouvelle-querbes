@@ -27,7 +27,7 @@ var scriptList = [
 	'src/components/jquery-viewport-checker/src/jquery.viewportchecker.js',
 	//'src/components/mixitup2/src/jquery.mixitup.js',
 	'src/components/viewport-units-buggyfill/viewport-units-buggyfill.js',
-	'src/js/custom/bigSlide.js'
+	'src/js/custom/*.js'
 	//'src/js/custom/mixitup-call.js'
 ];
 

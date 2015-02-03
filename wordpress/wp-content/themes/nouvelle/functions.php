@@ -10,7 +10,7 @@ include('includes/wp-cuztom-posts/custom-post-slider.php');
 require_once('includes/functions/add-classes-to-body.php');
 require_once('includes/functions/breadcrumbs.php');
 //require_once('includes/functions/add-footer-widget.php');
-require_once('includes/functions/admin-tinymce.php');
+//require_once('includes/functions/admin-tinymce.php');
 //require_once('includes/functions/custom-login-logo.php');
 require_once('includes/functions/add-social-share.php');
 require_once('includes/functions/enqueue-style.php');

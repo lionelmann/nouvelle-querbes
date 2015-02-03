@@ -1,3 +1,80 @@
+nav {
+    @include span-columns(10 of 12);
+}
+
+nav ul
+{
+    list-style:none;
+    position:relative;
+    float: right;
+    margin:0;
+    padding:0;
+    
+}
+
+nav ul a
+{
+    display:block;
+    text-decoration:none;
+    font-size: .9em;
+    padding: 16px 10px 0 10px;
+    height: 60px;
+    color: $white;
+}
+
+nav ul li
+{
+    position:relative;
+    float:left;
+    margin:0;
+    padding:0
+}
+/*
+nav ul li.current-menu-item
+{
+    background:#ddd
+}
+*/
+nav ul li:hover
+{
+    background:#000000;
+}
+
+nav ul ul
+{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#000000;
+    padding:0
+}
+
+nav ul ul li
+{
+    float:none;
+    width:200px
+}
+
+nav ul ul a
+{
+    line-height:120%;
+    padding: 18px 15px 0 15px;
+}
+
+nav ul ul ul
+{
+    top:0;
+    left:100%
+}
+
+nav ul li:hover > ul
+{
+    display:block
+}
+
+
+/*
 .menu {
 
     display: none;
@@ -75,7 +152,7 @@
     }
 }
 
-/*for the top-level separators*/
+
 .menu li.separator {
     border-left: 1px solid #F7F7F7;
     border-right: 1px solid #BBBBBB;
@@ -83,7 +160,7 @@
     overflow: hidden;
 }
 
-/*######sub level###########*/
+
 
 .menu li li {
     float: none;
@@ -98,7 +175,7 @@
 
 .menu li:hover ul, .menu li.onhover ul {
     left: -20px;
-    /*Use this property to change offset of the dropdown*/
+    
     top: auto;
 }
 
@@ -111,4 +188,4 @@
 .menu li li:hover ul, .menu li li li:hover ul, .menu li li li li:hover ul,
 .menu li li.onhover ul, .menu li li li.onhover ul, .menu li li li li.onhover ul {
     left: 228px;
-}
+}*/
