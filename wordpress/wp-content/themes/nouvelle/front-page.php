@@ -1,23 +1,13 @@
 <?php get_header(); ?>
 
 <section role="slider">
-	<?php query_posts('post_type=slider'); ?>
-	<?php if(have_posts()): while(have_posts()):the_post(); ?>		
-				
-		<ul class="slider">
-			<?php 
-				$slide_img = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-				if(!$slide_img) {
-					$slide_img = get_bloginfo('template_url')."/dist/images/no-image.jpg";
-				}
-			?>
-			<li>
-				<img src="<?php echo $slide_img;?>" />
-				<div class="bx-caption"><?php the_title();?></div>
-			</li>
-		<?php endwhile; ?>
-		</ul>   
-	<?php endif; wp_reset_query();?>     
+	<ul class="bxslider">
+		<?php query_posts('post_type=slider'); ?>
+		<?php if(have_posts()): while(have_posts()):the_post(); ?>
+			<?php $slideImg = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+			<li><img src="<?php echo $slideImg;?>"><div class="bx-caption"><?php the_title();?></div></li>
+		<?php endwhile; endif; wp_reset_query();?>
+	</ul>
 </section>
 
 <div class="columns">
@@ -65,7 +55,6 @@
 	</div>
 </div>
 
-
 <div class="video-container">
 	<?php query_posts('post_type=page&p=217&showposts=1');?>
 	<?php if(have_posts()): while(have_posts()):the_post(); ?>
@@ -79,7 +68,6 @@
 		<div class="content">
 			<div class="video-icon">
 				<a href=" http://www.youtube.com/embed/SKa6rKXJf_s" rel="prettyPhoto"><img src="<?php bloginfo('template_url');?>/dist/images/video-icon.png"></a>
-				<h6>LANCER LA VIDÉO</h6>
 			</div>
 		</div>
 	<?php endwhile; endif; wp_reset_query(); ?>

@@ -7,12 +7,15 @@ http://drinchev.github.io/monosocialiconsfont/
 $icon-font: "Mono Social Icons Font";
 
 // Fonts
-$sans-serif: "grafolita-script",sans-serif;
-$serif: "museo-slab",serif;
+$san-serif: "open_sansregular";
+$san-serif-bold: "open_sansbold";
+$san-serif-light: "open_sanslight";
+$san-serif-semibold: "open_sanssemibold";
+$san-serif-extrabold: "open_sansextrabold";
 
 // Base Fonts
-$base-font-family: $serif;
-$header-font-family: $serif;
+$base-font-family: $san-serif;
+$header-font-family: $san-serif-semibold;
 
 // Base Sizes
 $base-font-size: 1em;
@@ -38,6 +41,33 @@ $light-gray:	rgba(242, 242, 242, 1);
 $light-yellow: 	rgba(255, 246, 191, 1);
 $light-red: 	rgba(251, 227, 228, 1);
 $light-green: 	rgba(230, 239, 194, 1);
+
+
+// Typography-specific
+$black: rgba(0, 0, 0, 1);
+$white: rgba(255, 255, 255, 1);
+$light-gray: rgba(204, 204, 204, 1);
+
+// Basic Color Variables
+$body_font: black;
+$body_bg: rgba(236, 240, 241, 1);
+$footer_bg: rgba(57, 67, 77, 1);
+
+// Headers
+$header_link: black;
+$header_link_hover: #00ffb6;
+
+// Search
+$search-bar-background: rgb(22, 42, 51);
+$search-autocomplete-selected-background: rgb(200, 200, 200);
+
+$green: #8fcc93;
+$light-green: #00ffb6;
+$light-green-2: #00ffe0;
+
+
+
+
 
 // Background Color
 $base-background-color: $white;
@@ -73,35 +103,3 @@ $form-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
 $form-font-size: 2em;
 $form-font-family: $base-font-family;
-
-
-// =============================================================================
-//  RATIOS
-// =============================================================================
-
-// =============================================================================
-//  COLOURS
-// =============================================================================
-
-$color--primary-dark: #7B1FA2;
-$color--primary: #9C27B0;
-$color--primary-light: #E1BEE7;
-
-$color--text-primary: #212121; // also for icons
-$color--text-secondary: #727272;
-$color--divider: #B6B6B6;
-
-$color--accent: #CDDC39;
-
-// =============================================================================
-//  FONTS
-// =============================================================================
-
-$font-family--primary: "Roboto", sans-serif;
-
-$font-size--small: 16px;
-$font-size--medium: 22px;
-$font-size--large: 36px;
-
-$line-height--small: 1;
-$line-height--medium: 1.6;

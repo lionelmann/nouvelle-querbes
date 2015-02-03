@@ -1,7 +1,10 @@
-jQuery(document).ready(function(e) {
-	e('.slider').bxSlider({
-		auto: true,	
+jQuery(document).ready(function(){
+	jQuery('.bxslider').bxSlider({
+  		auto: true,	
 		mode: 'fade',
-		pager: false
+		pager: false,
+		onSliderLoad: function(){
+        jQuery(".bxslider").css("visibility", "visible");
+      }
 	});
 });

@@ -34,13 +34,13 @@
 				Télécopieur: (514) 272-7622 
 			</p>
 			<p>
-				Courriel : <a href="mailto:direction.nouvelle-querbes@csmb.qc.ca">direction.nouvelle-querbes@csmb.qc.ca</a>
+				<i class="fa fa-envelope-o"></i> <a href="mailto:direction.nouvelle-querbes@csmb.qc.ca">direction.nouvelle-querbes@csmb.qc.ca</a>
 			</p>
         </div> 
     </div>
     <div class="footer-inner">
-       <div class="copyright">
-            <small>Made with love by <a href="http://hypenotic.com">Informatique</a></small>
+       <div class="copyright" style="text-align: center;">
+            <small>Made with <i class="fa fa-heart"></i> by <a href="#">Informatique</a></small>
         </div>
     </div>
 </footer>

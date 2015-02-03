@@ -1,6 +1,13 @@
-.slider {
+section[role=slider] {
+    @include outer-container;
+    //position: relative;
+}
+
+.bxslider {
     list-style: none;
     padding-left: 0;
+    margin: 0;
+    visibility: hidden;
 }
 
 .bx-wrapper {
@@ -10,7 +17,8 @@
     position: relative;
     @include media($bp-large) {
         border-bottom: 30px solid #fff;
-        padding: 0px 0 0;
+        padding:0;
+        margin:0;
     }
     img {
         display: block;
@@ -65,14 +73,14 @@
     }
     .bx-prev {
         background: url(dist/images/banner-arrow.png) no-repeat 0 0;
-        left: -20px;
+        left: 20px;
         &:hover {
             background-position: 0 0px;
         }
     }
     .bx-next {
         background: url(dist/images/banner-arrow.png) no-repeat -122px 0px;
-        right: -20px;
+        right: 20px;
         &:hover {
             background-position: -122px 0px;
         }

@@ -14,12 +14,11 @@ footer {
             @include media($bp-large) {
                 @include span-columns(3);
                 &:nth-of-type(2) {
-                    @include shift(1);
                     @include span-columns(4);
                 }
                 &:nth-of-type(3) {
                     @include shift(1);
-                    @include span-columns(3);
+                    @include span-columns(4);
                     
                 }
             }

@@ -5,8 +5,3 @@ body {
     background-repeat: repeat;
     background-position: center center;            /* optionally, center the image */
 }
-
-section[role=slider] {
-    @include outer-container;
-    position: relative;
-}
