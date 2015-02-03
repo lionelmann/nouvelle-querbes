@@ -21,6 +21,9 @@ nav ul a
     padding: 16px 10px 0 10px;
     height: 60px;
     color: $white;
+    &:hover {
+        color: $light-green;
+    }
 }
 
 nav ul li
