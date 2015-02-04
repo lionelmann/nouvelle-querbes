@@ -30,7 +30,6 @@
         margin-top: 50%;
         transform: translate(-50%, -50%);
     }
-
     .content {
         @include media($bp-large) {
             @include span-columns(4);

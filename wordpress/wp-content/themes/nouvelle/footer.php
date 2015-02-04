@@ -15,7 +15,7 @@
     <div class="footer-inner">
         <!-- Row 2 / Column 1 -->
          <div class="content">
-	        <?php wp_nav_menu(array('container' => false, 'container_class' => '', 'menu_id' => '', 'menu' => '', 'menu_class' => 'menu', 'theme_location' => 'header-menu'));	?>
+
         </div> 
         <!-- Row 2 / Column 2 -->
         <div class="content">

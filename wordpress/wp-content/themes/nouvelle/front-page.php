@@ -5,7 +5,7 @@
 		<?php query_posts('post_type=slider'); ?>
 		<?php if(have_posts()): while(have_posts()):the_post(); ?>
 			<?php $slideImg = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-			<li><img src="<?php echo $slideImg;?>"><div class="bx-caption"><?php the_title();?></div></li>
+			<li><img src="<?php echo $slideImg;?>"></li>
 		<?php endwhile; endif; wp_reset_query();?>
 	</ul>
 </section>
