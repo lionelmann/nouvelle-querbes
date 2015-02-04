@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Google Drive Folder
  * Plugin URI: http://www.nouvellequerbes.org
- * Description: Plugin maison pour insérer un répertoire google drive
+ * Description: Plugin maison.  Ajouter les shortcode [gdrive], [gdrive_grid], [journal repertoire="" fichier="" texte=""]
  * Version: .9
  * Author: Nicolas Beauchemin
  * Author URI: http://www.nouvellequerbes.org
@@ -43,7 +43,7 @@ function journal_shortcode( $atts ) {
 	);
 
 	// Code
-return "<a target='_blank' href='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".pdf'><img title='".$texte."' src ='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".jpg'></a>";
+return "<figure><a target='_blank' href='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".pdf'><img src ='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".jpg'><figcaption>".$texte."</figcaption></figure></a>";
 
 
 }
