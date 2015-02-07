@@ -9,8 +9,6 @@ include('includes/wp-cuztom-posts/custom-post-slider.php');
 //Load custom functions
 require_once('includes/functions/add-classes-to-body.php');
 require_once('includes/functions/breadcrumbs.php');
-//require_once('includes/functions/add-footer-widget.php');
-//require_once('includes/functions/admin-tinymce.php');
 //require_once('includes/functions/custom-login-logo.php');
 require_once('includes/functions/add-social-share.php');
 require_once('includes/functions/enqueue-style.php');
@@ -25,13 +23,5 @@ require_once('includes/functions/remove-header-meta.php');
 require_once('includes/functions/remove-menu-id.php');
 require_once('includes/functions/remove-wp-version.php');
 require_once('includes/functions/add-limit-characters-excerpt.php');
-
-//Load shortcodes
-//require_once('includes/shortcodes/accordion.php');
-//require_once('includes/shortcodes/button.php');
-//require_once('includes/shortcodes/content.php');
-//require_once('includes/shortcodes/content-sidebar.php');
-//require_once('includes/shortcodes/readmore.php');
-//require_once('includes/shortcodes/tab.php');
 
 ?>

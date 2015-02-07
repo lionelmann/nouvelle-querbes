@@ -23,7 +23,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class();?> data-page="index">
+<body class="animated fadeIn">
 
 <section role="banner">
     <header>

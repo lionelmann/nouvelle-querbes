@@ -17,8 +17,8 @@
 		<?php query_posts('post_type=tribe_events&showposts=5'); ?>
 		
 		<?php if(have_posts()): while(have_posts()):the_post(); ?>
-			<p class="meta"><?php echo get_the_date('d.m.Y');?><br
-			<a href="<?php the_permalink();?>"><?php the_title();?> >></a></p>
+			<p class="meta"><?php echo get_the_date('d.m.Y');?><br>
+			<a href="<?php the_permalink();?>" class="event-item"><?php the_title();?> >></a></p>
 		<?php endwhile; ?>
 
 		<a href="" class="read-more">Read More</a>

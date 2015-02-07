@@ -20,7 +20,6 @@ Version: 1.0
 @import "base/typography.scss";
 @import "base/wp-core.scss";
 
-@import "layout/grid";
 @import "layout/header";
 @import "layout/content";
 @import "layout/aside";
@@ -37,3 +36,6 @@ Version: 1.0
 @import "components/slider";
 
 @import "pages/home";
+
+@import "vendors/animate";
+
