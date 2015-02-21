@@ -7,7 +7,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body class="animated fadeIn">
+<body <?php body_class('animated fadeIn'); ?>>
 
 <section role="banner">
     <header>

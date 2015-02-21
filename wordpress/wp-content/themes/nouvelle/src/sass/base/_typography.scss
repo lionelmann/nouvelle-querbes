@@ -1,8 +1,8 @@
-@include font-face(open_sanslight, 'dist/fonts/opensans-light', normal, normal);
-@include font-face(open_sansregular, 'dist/fonts/opensans-regular-webfont', normal, normal);
-@include font-face(open_sansbold, 'dist/fonts/opensans-bold', normal, normal);
-@include font-face(open_sanssemibold, 'dist/fonts/opensans-semibold-webfont', normal, normal);
-@include font-face(open_sansextrabold, 'dist/fonts/opensans-extrabold-webfont', normal, normal);
+//@include font-face(open_sanslight, 'dist/fonts/opensans-light', normal, normal);
+//@include font-face(open_sansregular, 'dist/fonts/opensans-regular-webfont', normal, normal);
+//@include font-face(open_sansbold, 'dist/fonts/opensans-bold', normal, normal);
+//@include font-face(open_sanssemibold, 'dist/fonts/opensans-semibold-webfont', normal, normal);
+//@include font-face(open_sansextrabold, 'dist/fonts/opensans-extrabold-webfont', normal, normal);
 
 body {
     background-color: $base-background-color;
@@ -44,6 +44,16 @@ h6 {
 
 a {
     color: $green;
+    text-decoration: none;
+    &:hover {
+        color: $dark-gray;
+        outline: none;
+        text-decoration: none;
+    }
+}
+
+.columns a {
+    color: $white;
     text-decoration: none;
     &:hover {
         color: $dark-gray;
