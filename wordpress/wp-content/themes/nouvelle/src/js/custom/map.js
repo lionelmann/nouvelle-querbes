@@ -116,20 +116,20 @@
             var map = new google.maps.Map(mapElement, mapOptions);
 
             // Define Marker properties
-            var image = new google.maps.MarkerImage(template_url+'/images/map-pointer.png',
+            //var image = new google.maps.MarkerImage(template_url+'/images/map-pointer.png',
                 // This marker is 129 pixels wide by 42 pixels tall.
-                new google.maps.Size(57, 73),
+            //    new google.maps.Size(57, 73),
                 // The origin for this image is 0,0.
-                new google.maps.Point(0,0),
+            //    new google.maps.Point(0,0),
                 // The anchor for this image is the base of the flagpole at 18,42.
-                new google.maps.Point(34, 43)
-            );
+            //    new google.maps.Point(34, 43)
+            //);
 
             // Add Marker
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(45.5172539, -73.6005289,17),
-                map: map,
-                icon: image // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
+                map: map
+                //icon: image // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
 
             });
 

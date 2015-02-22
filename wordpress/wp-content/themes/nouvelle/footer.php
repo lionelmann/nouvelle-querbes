@@ -40,7 +40,7 @@
     </div>
     <div class="footer-inner">
        <div class="copyright" style="text-align: center;">
-            <small>Made with <i class="fa fa-heart"></i> by <a href="#">Informatique</a></small>
+            <small>Fait avec <i class="fa fa-heart"></i> par <a href="<?php site_url(); ?>/implication-des-parents/les-comites/informatique">Informatique</a></small>
         </div>
     </div>
 </footer>

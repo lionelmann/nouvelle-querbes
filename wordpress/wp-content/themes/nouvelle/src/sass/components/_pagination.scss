@@ -8,7 +8,6 @@
 
     //@include adjust-font-size-to(20px);
     display: none;
-    font-family: $san-serif;
     margin-top: 80px;
     z-index: 1000;
     @include media($bp-large) {
@@ -57,8 +56,6 @@
 }
 
 .pagi {
-    //@include adjust-font-size-to(16px);
-    border-top: 1px dotted $light_gray;
     padding: 3em 0 3em 0;
     & .page-numbers {
         color: #666;

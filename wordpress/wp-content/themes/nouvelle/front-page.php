@@ -42,10 +42,11 @@
 	<div class="content box-1 arrows">
 		<h6>Avis Important</h6>
 
-		<?php query_posts('cat=3&showposts=2'); ?>
+		<?php query_posts('cat=3&showposts=1'); ?>
 		
 		<?php if(have_posts()): while(have_posts()):the_post(); ?>
 			<p><a href="<?php the_permalink();?>"><?php the_title();?> <i class="fa fa-arrow-right"></i></a></p>
+			<?php the_content(); ?> 
 		<?php endwhile; ?>
 				
 		<a href="<?php echo get_category_link(3);?>" class="read-more">Read More</a>

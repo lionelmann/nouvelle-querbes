@@ -1,9 +1,3 @@
-//@include font-face(open_sanslight, 'dist/fonts/opensans-light', normal, normal);
-//@include font-face(open_sansregular, 'dist/fonts/opensans-regular-webfont', normal, normal);
-//@include font-face(open_sansbold, 'dist/fonts/opensans-bold', normal, normal);
-//@include font-face(open_sanssemibold, 'dist/fonts/opensans-semibold-webfont', normal, normal);
-//@include font-face(open_sansextrabold, 'dist/fonts/opensans-extrabold-webfont', normal, normal);
-
 body {
     background-color: $base-background-color;
     color: $base-font-color;
@@ -11,7 +5,7 @@ body {
     font-size: $base-font-size;
 }
 
-h1, h2, h3, h4, h5, h6 { font-family: $header-font-family; }
+h1, h2, h3, h4, h5, h6 { font-weight: 600; }
 
 h5, h6, h4 { text-transform: uppercase; }
 
@@ -23,7 +17,7 @@ h3 { font-size: modular-scale(4); }
 
 h4 { 
     font-size: modular-scale(3); 
-    font-family: $san-serif-extrabold;
+    font-weight: 800;
     @include margin(0px null 20px null);
     &:after {
             background: url(dist/images/headline-arrow.png) no-repeat;
@@ -43,34 +37,35 @@ h6 {
 }
 
 a {
-    color: $green;
+    color: $base-link-color;
     text-decoration: none;
     &:hover {
-        color: $dark-gray;
+        color: $hover-link-color;
         outline: none;
         text-decoration: none;
     }
 }
 
-.columns a {
-    color: $white;
+.box-1 a, .box-2 a, .box-3 a {
+    color: $box-link-color;
     text-decoration: none;
     &:hover {
-        color: $dark-gray;
+        color: $box-hover-color;
         outline: none;
         text-decoration: none;
     }
 }
 
-.meta { font-family: $san-serif-bold; }
+.meta { 
+    font-weight: 700; }
 
 footer {
     font-size: .9em;
     a {
-        color: $header_link_hover;
+        color: $footer-link-color;
         text-decoration: none;
         &:hover {
-            color: $white;
+            color: $footer-link-hover;
         }
     }
     ul {

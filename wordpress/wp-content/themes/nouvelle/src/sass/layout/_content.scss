@@ -10,7 +10,7 @@ section[role=main] {
             @include span-columns(8);
         }
         .article-inside {
-            background-color: $white;
+            background-color: $base-background-color;
             padding: 2em;
             margin-bottom: 2em;
         }
