@@ -6,7 +6,7 @@ function the_breadcrumb() {
         echo '<li class="home-link"><a href="';
         echo get_option('home');
         echo '">';
-        echo 'Accuiel';
+        echo 'Accueil';
         echo '</a></li><li class="separator"> // </li>';
         if (is_category() || is_single()) {
             echo '<li>';
