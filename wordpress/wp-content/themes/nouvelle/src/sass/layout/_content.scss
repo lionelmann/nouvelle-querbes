@@ -9,10 +9,10 @@ section[role=main] {
         @include media($bp-large) {
             @include span-columns(8);
         }
-        .article-inside {
-            background-color: $white;
-            padding: 2em;
-            margin-bottom: 2em;
-        }
+    }
+    .article-inside {
+        background-color: $base-background-color;
+        padding: 2em;
+        margin-bottom: 2em;
     }
 }

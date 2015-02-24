@@ -116,7 +116,8 @@
             var map = new google.maps.Map(mapElement, mapOptions);
 
             // Define Marker properties
-            var image = new google.maps.MarkerImage(template_url+'/images/map-pointer.png',
+            var template_url = '/wordpress/wp-content/themes/nouvelle';
+            var image = new google.maps.MarkerImage(template_url+'/dist/images/map-pointer.png',
                 // This marker is 129 pixels wide by 42 pixels tall.
                 new google.maps.Size(57, 73),
                 // The origin for this image is 0,0.

@@ -40,11 +40,26 @@
     </div>
     <div class="footer-inner">
        <div class="copyright" style="text-align: center;">
-            <small>Made with <i class="fa fa-heart"></i> by <a href="#">Informatique</a></small>
+            <small>Fait avec <i class="fa fa-heart"></i> par <a href="<?php site_url(); ?>/implication-des-parents/les-comites/informatique">Informatique</a></small>
         </div>
     </div>
 </footer>
 <?php wp_footer();?>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        var colors1 = ["#385c78", "#9d302f"]
+        var colors2 = ["#000000", "#33CC66"]
+        selectedColor = colors1[Math.floor(Math.random()*colors1.length)]
+        selectedColor2 = colors2[Math.floor(Math.random()*colors2.length)]
+        header = $(".box-2");
+        header1 = $(".box-3");
+        header.css("background-color", selectedColor);
+        header1.css("background-color", selectedColor2);
+});
+
+</script>
+
 </body>
 </html>
 

@@ -12,7 +12,6 @@ var gulp 		= require('gulp'),
 	sass 		= require('gulp-ruby-sass'),
 	imagemin 	= require('gulp-imagemin'),
 	pngquant 	= require('imagemin-pngquant'),
-	cache 		= require('gulp-cached'),
 	livereload 	= require('gulp-livereload'),
 	notify 		= require('gulp-notify'),
 	jshint 		= require('gulp-jshint');
