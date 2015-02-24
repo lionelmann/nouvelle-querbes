@@ -1,5 +1,5 @@
 nav {
-    //@include span-columns(12 of 12);
+    //@include span-columns(5 of 12);
     float:right;
 }
 
@@ -17,10 +17,10 @@ nav ul a
 {
     display:block;
     text-decoration:none;
-    font-size: .9em;
-    padding: 16px 10px 0 10px;
+    font-size: .825em;
+    padding: 30px 10px 0 10px;
     height: 60px;
-    color: $white;
+    color: #E0E0D1;
     &:hover {
         color: $light-green;
     }
@@ -32,7 +32,7 @@ nav ul li
     position:relative;
     float:left;
     margin:0;
-    padding:0
+    padding:0;
 }
 
 nav ul li:hover

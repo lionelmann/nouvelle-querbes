@@ -1,5 +1,5 @@
 section[role=banner] {
-    height: 60px;
+    height: 85px;
     width: 100%;
     background-color: $header-background-color;
     header {
@@ -8,13 +8,12 @@ section[role=banner] {
         z-index: 2000;
         .logo {
             position: absolute;
-            //@include span-columns(2 of 12);
             z-index: 2100;
             &:hover {
                 opacity: 0.8;
             }
             @include media($bp-large) {
-                padding: 1em 0 0 1em;
+                padding: .5em 0 0 1em;
             }
         }
     }

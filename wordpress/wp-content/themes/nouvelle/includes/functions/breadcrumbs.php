@@ -3,6 +3,40 @@ function the_breadcrumb() {
     global $post;
     echo '<ul id="breadcrumbs">';
     if (!is_home()) {
+        echo '<li class="home-link">';
+        echo '<a href="';
+        echo get_option('home');
+        echo '">';
+        bloginfo('name');
+        echo "</a></li>  // ";
+        if (is_category() || is_single()) {
+            the_category(' ');
+            if (is_single()) {
+                echo " ";
+                the_title();
+            }
+        } elseif (is_page()) {
+           if($post->post_parent){
+                $anc = get_post_ancestors( $post->ID );
+                $title = get_the_title();
+                foreach ( $anc as $ancestor ) {
+                    $output = '<a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a>';
+                }
+                echo $output;
+                echo '<span title="'.$title.'"> '.$title.'</span>';
+            } else {
+                echo '<li><span> '.get_the_title().'</span></li>';
+            }
+        }
+    }
+    echo '</ul>';
+}
+
+/*
+function the_breadcrumb() {
+    global $post;
+    echo '<ul id="breadcrumbs">';
+    if (!is_home()) {
         echo '<li class="home-link"><a href="';
         echo get_option('home');
         echo '">';
@@ -39,4 +73,5 @@ function the_breadcrumb() {
     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
     echo '</ul>';
 }
+*/
 ?>

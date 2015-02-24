@@ -24,7 +24,6 @@
 		<a href="/evenements/" class="read-more">Read More</a>
 		<?php endif; wp_reset_query(); ?>
 	</div>
-
 	<div class="content box-3">
 		<h6>COURRIER du jeudi</h6>
 		

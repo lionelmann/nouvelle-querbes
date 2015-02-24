@@ -4,7 +4,7 @@
 <section role="main">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<article>	
-			<?php the_title( '<h4 class="headline">', '</h4>' ); ?>
+			<h4><?php the_title(); ?></h4>
 			<div class="article-inside">
 				<?php the_content();?>
 			</div>
