@@ -48,8 +48,8 @@
 
 <script type="text/javascript">
     jQuery(document).ready(function() {
-        var colors1 = ["#385c78", "#9d302f"]
-        var colors2 = ["#000000", "#33CC66"]
+        var colors1 = ["#fc6a42", "#ff5f5f", "#00ffb6"]
+        var colors2 = ["#cae8a7", "#8fcc93", "#7ce57f"]
         selectedColor = colors1[Math.floor(Math.random()*colors1.length)]
         selectedColor2 = colors2[Math.floor(Math.random()*colors2.length)]
         header = $(".box-2");
