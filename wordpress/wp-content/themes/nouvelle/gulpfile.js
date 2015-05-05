@@ -22,14 +22,11 @@ var outputDir = 'dist';
 var scriptList = [
 	'src/components/modernizer/modernizr.js',
 	'src/components/jquery/dist/jquery.js', 
-	//'src/components/fitvids/jquery.fitvids.js',
 	'src/components/jquery-viewport-checker/src/jquery.viewportchecker.js',
-	//'src/components/mixitup2/src/jquery.mixitup.js',
 	'src/components/viewport-units-buggyfill/viewport-units-buggyfill.js',
 	'src/components/bx-slider.js/jquery.bxslider.js',
 	'src/js/custom/map.js',
 	'src/js/custom/slider.js'
-	//'src/js/custom/mixitup-call.js'
 ];
 
 var fontIcons = [

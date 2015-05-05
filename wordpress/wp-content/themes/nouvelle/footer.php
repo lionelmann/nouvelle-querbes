@@ -57,10 +57,6 @@
         header.css("background-color", selectedColor);
         header1.css("background-color", selectedColor2);
 });
-
 </script>
-
 </body>
 </html>
-
-
