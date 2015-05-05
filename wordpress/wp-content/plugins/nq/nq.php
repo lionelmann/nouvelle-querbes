@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Google Drive Folder
+ * Plugin Name: Plugin maison Nouvelle-Querbes
  * Plugin URI: http://www.nouvellequerbes.org
- * Description: Plugin maison.  Ajouter les shortcode [gdrive], [gdrive_grid], [journal repertoire="" fichier="" texte=""]
+ * Description: Plugin maison.  Ajouter les shortcodes [gdrive], [gdrive_grid], [gdrive_pdf], [journal repertoire="" fichier="" texte=""], [wpb_childpages], [infoquerbes]
  * Version: .9
  * Author: Nicolas Beauchemin
  * Author URI: http://www.nouvellequerbes.org
@@ -50,6 +50,46 @@ return "<figure><a target='_blank' href='http://www.nouvellequerbes.org/document
 add_shortcode( 'journal', 'journal_shortcode' );
 
 
+
+//Fonction pour lister les pages enfants
+
+function wpb_list_child_pages() {
+global $post;
+    
+
+$childpages = wp_list_pages( 'sort_column=post_title&title_li=&child_of=' . $post->ID . '&echo=0' );
+if ( $childpages ) {
+    $string = '<ul>' . $childpages . '</ul>';
+}
+return $string;
+}
+add_shortcode('wpb_childpages', 'wpb_list_child_pages');
+
+
+
+
+//Fonction pour lister les articles de la catégorie 4 (infoquerbes)
+
+function listeinfoquerbes(){		
+query_posts('cat=4'); 
+if(have_posts()): while(have_posts()):the_post();  
+
+			echo "<h6>";the_title();
+echo "</h6>";
+		echo "<div class='article-inside'>";
+				the_content();
+echo "</div>";
+
+
+
+endwhile; 
+
+endif; wp_reset_query(); 
+
+
+}
+
+add_shortcode('infoquerbes', 'listeinfoquerbes');
 
 
 ?>
