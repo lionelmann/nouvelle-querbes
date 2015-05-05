@@ -5,15 +5,14 @@ section[role=banner] {
     header {
         @include outer-container;
         position: relative;
-        z-index: 2000;
+        z-index: 1000;
         .logo {
             position: absolute;
-            z-index: 2100;
             &:hover {
                 opacity: 0.8;
             }
             @include media($bp-large) {
-                padding: .5em 0 0 1em;
+                @include pad(0.5em 0 0 1em);
             }
         }
     }

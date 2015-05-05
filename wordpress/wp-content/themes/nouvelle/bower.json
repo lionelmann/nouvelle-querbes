@@ -10,10 +10,7 @@
 		"viewport-units-buggyfill": "latest",
 		"jquery-viewport-checker": "latest",
 		"video.js": "latest",
-		"fitvids": "latest",
 		"fontawesome": "latest",
-		"bigSlide": "latest",
-		"bx-slider.js":"4.1.3",
 		"monosocialiconsfont": "latest"
   	}
 }
