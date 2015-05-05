@@ -17,8 +17,13 @@
         <div class="logo">
             <a href="<?php bloginfo('url');?>"><img src="<?php bloginfo('template_url' ); ?>/dist/images/logo-new.png"></a>
         </div>
-        <nav>
+
+        <nav class="mobile">
+            <?php wp_nav_menu(array('container' => false, 'container_class' => '', 'menu_id' => '', 'menu' => '', 'menu_class' => 'menu', 'theme_location' => 'header-menu'));  ?>
+        </nav>
+
+        <nav class="nav">
 			<?php wp_nav_menu(array('container' => false, 'container_class' => '', 'menu_id' => '', 'menu' => '', 'menu_class' => 'menu', 'theme_location' => 'header-menu'));	?>
 		</nav>
     </header>
-</section>
+</section>    

@@ -18,6 +18,8 @@ h3 { font-size: modular-scale(4); }
 h4 { 
     font-size: modular-scale(3); 
     font-weight: 800;
+    @include margin(50px null 20px null);
+    @include media($bp-large) {
     @include margin(0px null 20px null);
     &:after {
             background: url(dist/images/headline-arrow.png) no-repeat;
@@ -27,6 +29,7 @@ h4 {
             margin-left: 10px;
             width: 20px;
     }
+}
 }
 
 h5 { font-size: modular-scale(2); }

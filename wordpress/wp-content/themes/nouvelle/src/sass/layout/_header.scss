@@ -8,13 +8,14 @@ section[role=banner] {
         z-index: 1000;
         .logo {
             position: absolute;
+            width: 50%;
             &:hover {
                 opacity: 0.8;
             }
             @include media($bp-large) {
                 @include pad(0.5em 0 0 1em);
+                width: 50%;
             }
         }
     }
 }
-

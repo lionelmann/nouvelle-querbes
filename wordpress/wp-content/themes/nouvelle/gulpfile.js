@@ -26,9 +26,7 @@ var scriptList = [
 	'src/components/viewport-units-buggyfill/viewport-units-buggyfill.js',
 	'src/components/bx-slider.js/jquery.bxslider.js',
 	'src/js/custom/map.js',
-	'src/js/custom/slider.js',
-	'src/js/custom/offcanvas.js'
-
+	'src/js/custom/slider.js'
 ];
 
 var fontIcons = [
