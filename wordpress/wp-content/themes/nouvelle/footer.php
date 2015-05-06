@@ -44,6 +44,8 @@
         </div>
     </div>
 </footer>
+</div> <!--END #CONTENT-->
+
 <?php wp_footer();?>
 
 <script type="text/javascript">
@@ -57,6 +59,13 @@
         header.css("background-color", selectedColor);
         header1.css("background-color", selectedColor2);
 });
+</script>
+
+<script>
+    $('#button').on('click', function() {
+        $('#content').toggleClass('isOpen');
+        $(this).toggleClass('active');
+    });
 </script>
 </body>
 </html>

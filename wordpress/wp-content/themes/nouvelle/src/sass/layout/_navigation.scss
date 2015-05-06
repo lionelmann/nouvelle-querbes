@@ -1,6 +1,12 @@
 
 .mobile {
-    display: none;
+    position: absolute;
+    right: 0; //change to left for left open
+    width: 260px;
+    ul {
+        list-style: none;
+    }
+    
     @include media($bp-large) {
         display: none;
     }
@@ -16,18 +22,16 @@
 
 .nav ul {
     list-style:none;
-    position:relative;
-    float: right;
     margin:0;
-    padding:0; 
+    padding:0;
 }
 
 .nav ul a {
     display:block;
     text-decoration:none;
     font-size: .825em;
-    padding: 30px 10px 0 10px;
-    height: 60px;
+    padding: 25px 10px 0 10px;
+    height: 70px;
     color: #E0E0D1;
     &:hover {
         color: $light-green;
@@ -40,10 +44,7 @@
     float:left;
     margin:0;
     padding:0;
-}
-
-.nav ul li:hover {
-    background:#000000;
+    width: 150px;
 }
 
 .nav ul ul {
@@ -52,24 +53,49 @@
     top:100%;
     left:0;
     background:#000000;
-    padding:0
+    padding-bottom: 20px;
 }
 
 .nav ul ul li {
     float:none;
-    width:200px
+    width:200px;
+    padding: 0;
+    margin-top: -20px;
 }
 
 .nav ul ul a {
-    line-height:120%;
-    padding: 18px 15px 0 15px;
-}
-
-.nav ul ul ul {
-    top:0;
-    left:100%
+    padding: 40px 15px 0px 15px;
 }
 
 .nav ul li:hover > ul {
     display:block
+}
+
+#button {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: background .3s;
+    float: right;
+    margin-top: 15px;
+    margin-right: 10px;
+    @include media($bp-large) {
+        display: none;
+    }
+}
+
+#button:before {
+    content:"\f0c9";
+    font: 30px/50px 'FontAwesome';
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background: rgba(255,255,255,.25);
+}
+
+#button.active {
+    background: rgba(255,255,255,.5);
 }
