@@ -92,4 +92,35 @@ endif; wp_reset_query();
 add_shortcode('infoquerbes', 'listeinfoquerbes');
 
 
+
+
+
+
+
+
+
+//Fonction pour mettre un  lien mail
+function cwc_mail_shortcode( $atts , $content=null ) {
+    for ($i = 0; $i < strlen($content); $i++) $encodedmail .= "&#" . ord($content[$i]) . ';'; 
+    return '<a href="mailto:'.$encodedmail.'">'.$encodedmail.'</a>';
+}
+add_shortcode('mailto', 'cwc_mail_shortcode');
+
+
+
+
+function cacher_fct($atts, $content=null){
+if(is_user_logged_in()) return $atts;
+}
+
+add_shortcode('cacher','cacher_fct');
+
+
+
+
+
+
+
+
+
 ?>
