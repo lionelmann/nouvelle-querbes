@@ -20,6 +20,19 @@ function gdrive_shortcode_grid( $atts, $content = null ) {
 add_shortcode( 'gdrive_grid', 'gdrive_shortcode_grid' );
 
 
+
+function gdrive_shortcode_grid_prive( $atts, $content = null ) {
+        if(is_user_logged_in()) return '<iframe src="https://drive.google.com/embeddedfolderview?id=' . $content . '#grid" frameborder="0" width="100%" height="500px" scrolling="auto"> </iframe>';
+}
+add_shortcode( 'gdrive_grid_prive', 'gdrive_shortcode_grid_prive' );
+
+
+
+
+
+
+
+
 function gdrive_shortcode_pdf( $atts, $content = null ) {
         return '<iframe src="https://docs.google.com/viewer?srcid=' . $content . '&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="100%" height="480px"></iframe>';
 }
