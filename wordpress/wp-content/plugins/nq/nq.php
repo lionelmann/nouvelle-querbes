@@ -110,7 +110,10 @@ add_shortcode('mailto', 'cwc_mail_shortcode');
 
 
 function cacher_fct($atts, $content=null){
-if(is_user_logged_in()) return $atts;
+session_start();
+$_SESSION['log']=1;
+
+if(is_user_logged_in()) return $content;
 }
 
 add_shortcode('cacher','cacher_fct');
