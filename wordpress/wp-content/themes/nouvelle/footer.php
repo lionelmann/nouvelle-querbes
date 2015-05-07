@@ -3,7 +3,7 @@
     <div class="footer-inner">
         <!-- Row 1 / Column 1 -->
         <div class="content">
-            <img src="<?php bloginfo('template_url');?>/dist/images/ecole-logo.png">
+            <img src="<?php bloginfo('template_url');?>/dist/images/logo-footer.png">
         </div>  
 
         <!-- Row 1 / Column 2 -->

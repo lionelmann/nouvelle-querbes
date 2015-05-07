@@ -1,6 +1,9 @@
 .breadcrumb {
     display: none;
     @include media($bp-large) {
+        .breadcrumb-inner {
+            @include outer-container;
+        }
         display: block;
         background: $bread-crumb-background-color;
         height: 50px;
