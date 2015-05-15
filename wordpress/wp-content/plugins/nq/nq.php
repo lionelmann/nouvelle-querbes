@@ -109,6 +109,28 @@ add_shortcode('infoquerbes', 'listeinfoquerbes');
 
 
 
+//Fonction pour lister les articles de la catégorie 4 (infoquerbes)
+
+function listecdj(){
+query_posts('cat=2');
+if(have_posts()): while(have_posts()):the_post();
+
+                        echo "<h6>";the_title();
+echo "</h6>";
+                echo "<div class='article-inside'>";
+                                the_content();
+echo "</div>";
+
+
+
+endwhile;
+
+endif; wp_reset_query();
+
+
+}
+
+add_shortcode('cdj', 'listecdj');
 
 
 
