@@ -1,26 +1,32 @@
 .columns {
     @include outer-container;
+    @include row(table);
     .content {
         @include media($bp-large) {
-            @include span-columns(4, table);
-            &:nth-of-type(2) {
-                @include span-columns(4, table);
-            }
-            &:nth-of-type(3) {
-                @include span-columns(4, table);  
-            }
+            @include span-columns(4);
         }
     }
 }
 
 .video-container {
     @include outer-container;
-    
+    @include row();
+    .content-2 {
+        position: relative;
+        @include media($bp-large) {
+            @include span-columns(4);
+            padding: 2em 0 0 2em;
+            
+                
+            
+        }
+    }
     p {
         line-height: 1.4em;
     }
-    img {
-        vertical-align: bottom;
+    .kids {
+        position: relative;
+        bottom: 0;
     }
     .video-icon {
         position: absolute;
@@ -30,17 +36,5 @@
         margin-top: 50%;
         transform: translate(-50%, -50%);
     }
-    .content {
-        @include media($bp-large) {
-            @include span-columns(4);
-            padding: 2em 0 0 2em;
-            &:nth-of-type(2) {   
-                @include span-columns(4);
-            }
-            &:nth-of-type(3) {
-                @include span-columns(4); 
-                position: relative;
-            }
-        }
-    }
+    
 }

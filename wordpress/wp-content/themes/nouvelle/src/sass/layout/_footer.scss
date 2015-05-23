@@ -18,8 +18,8 @@ footer {
                     @include shift(3);
                 }
                 &:nth-of-type(3) {
-                    @include shift(1);
-                    @include span-columns(4);
+                    @include shift(0.5);
+                    @include span-columns(4.5);
                     
                 }
             }

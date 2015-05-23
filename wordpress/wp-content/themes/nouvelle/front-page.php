@@ -57,14 +57,16 @@
 <div class="video-container">
 	<?php query_posts('post_type=page&p=217&showposts=1');?>
 	<?php if(have_posts()): while(have_posts()):the_post(); ?>
-		<div class="content">
+		<div class="content-2">
 			<?php the_title('<h6>','</h6>');?>
 			<?php the_content();?>
 		</div>
-		<div class="content">
-			<img src="<?php bloginfo('template_url' ); ?>/dist/images/kid.png">
+		<div class="content-2">
+			<div class="kids">
+				<img src="<?php bloginfo('template_url' ); ?>/dist/images/kid.png">
+			</div>
 		</div>
-		<div class="content">
+		<div class="content-2">
 			<div class="video-icon">
 				<a href=" http://www.youtube.com/embed/SKa6rKXJf_s" rel="prettyPhoto"><img src="<?php bloginfo('template_url');?>/dist/images/video-icon.png"></a>
 			</div>
