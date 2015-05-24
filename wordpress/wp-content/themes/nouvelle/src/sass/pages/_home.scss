@@ -15,18 +15,11 @@
         position: relative;
         @include media($bp-large) {
             @include span-columns(4);
-            padding: 2em 0 0 2em;
-            
-                
-            
+            padding: 2em 0 0 2em;  
         }
-    }
-    p {
-        line-height: 1.4em;
-    }
-    .kids {
-        position: relative;
-        bottom: 0;
+        img {
+            vertical-align: bottom;
+        }
     }
     .video-icon {
         position: absolute;
@@ -36,5 +29,4 @@
         margin-top: 50%;
         transform: translate(-50%, -50%);
     }
-    
 }

@@ -13,14 +13,3 @@ $visual-grid: false;
 $visual-grid-color: #cccccc;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.2;
-
-
-html, body {
-    height: 100%;
-}
-
-body {
-    //display: flex;
-    background: #555;
-    overflow-x: hidden;
-}
