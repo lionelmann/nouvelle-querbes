@@ -39,7 +39,7 @@ var sassOptions = {style: 'compressed'};
 
 // Create image minification task
 gulp.task('imagemin', function () {
-    return gulp.src('src/images/*')
+    return gulp.src(['src/images/*','src/images/**/*'])
     	//.pipe(cache())
         .pipe(imagemin({
             progressive: true,

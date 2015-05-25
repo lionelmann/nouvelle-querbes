@@ -62,7 +62,7 @@
 			<?php the_content();?>
 		</div>
 		<div class="content-2">
-			<img src="<?php bloginfo('template_url' ); ?>/dist/images/kid.png">
+			<img src="<?php randomImage(); ?>">
 		</div>
 		<div class="content-2">
 			<div class="video-icon">

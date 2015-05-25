@@ -10,6 +10,7 @@ include('includes/wp-cuztom-posts/custom-post-slider.php');
 require_once('includes/functions/breadcrumbs.php');
 //require_once('includes/functions/custom-login-logo.php');
 require_once('includes/functions/add-social-share.php');
+require_once('includes/functions/random-image.php');
 require_once('includes/functions/enqueue-style.php');
 require_once('includes/functions/enqueue-script.php');
 require_once('includes/functions/first-image.php');
