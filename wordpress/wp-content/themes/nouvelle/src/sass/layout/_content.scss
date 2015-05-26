@@ -24,9 +24,17 @@ section[role=main] {
   //transform: translate3d(0,0,0);
   transition: transform .3s;
   background: url(dist/images/bg-body.jpg) repeat;
-  //background: linear-gradient(to bottom, #D2FFFB 0%,#56e52b 100%);
-  //box-shadow: inset -110px 20px 80px -12px #C4AA95, inset 110px 20px 80px -12px #C4AA95;
-
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, #D2FFFB 0%,#FEFDDD 100%);
+    opacity: .6; 
+    z-index: -1;
+  }
 }
 
 #content.isOpen {

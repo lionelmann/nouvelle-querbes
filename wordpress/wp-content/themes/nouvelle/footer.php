@@ -1,5 +1,7 @@
-
+<div class="xline">
+</div>
 <footer>
+
     <div class="footer-inner">
         <!-- Row 1 / Column 1 -->
         <div class="content">

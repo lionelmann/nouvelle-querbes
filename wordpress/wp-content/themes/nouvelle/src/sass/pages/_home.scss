@@ -9,8 +9,12 @@
 }
 
 .video-container {
+    height: 100%;
+    @include media($bp-large) {
     @include outer-container;
     @include row();
+    height: 337px;
+}
     .content-2 {
         position: relative;
         @include media($bp-large) {
