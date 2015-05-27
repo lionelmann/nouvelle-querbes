@@ -53,6 +53,9 @@ a {
         outline: none;
         text-decoration: none;
     }
+    aside & {
+        font-weight: bold;
+    }
 }
 
 .box-1 a, .box-2 a, .box-3 a {
