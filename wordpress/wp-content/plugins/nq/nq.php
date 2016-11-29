@@ -10,19 +10,19 @@
  */
 
 function gdrive_shortcode( $atts, $content = null ) {
-	return '<iframe src="https://drive.google.com/embeddedfolderview?id=' . $content . '#list" frameborder="0" width="100%" height="500px" scrolling="auto"> </iframe>';
+    return '<iframe src="https://drive.google.com/embeddedfolderview?id=' . $content . '#list" frameborder="0" width="100%" height="500px" scrolling="auto"> </iframe>';
 }
 add_shortcode( 'gdrive', 'gdrive_shortcode' );
 
 function gdrive_shortcode_grid( $atts, $content = null ) {
-        return '<iframe src="https://drive.google.com/embeddedfolderview?id=' . $content . '#grid" frameborder="0" width="100%" height="500px" scrolling="auto"> </iframe>';
+    return '<iframe src="https://drive.google.com/embeddedfolderview?id=' . $content . '#grid" frameborder="0" width="100%" height="500px" scrolling="auto"> </iframe>';
 }
 add_shortcode( 'gdrive_grid', 'gdrive_shortcode_grid' );
 
 
 
 function gdrive_shortcode_grid_prive( $atts, $content = null ) {
-        if(is_user_logged_in()) return '<iframe src="https://drive.google.com/embeddedfolderview?id=' . $content . '#grid" frameborder="0" width="100%" height="500px" scrolling="auto"> </iframe>';
+    if(is_user_logged_in()) return '<iframe src="https://drive.google.com/embeddedfolderview?id=' . $content . '#grid" frameborder="0" width="100%" height="500px" scrolling="auto"> </iframe>';
 }
 add_shortcode( 'gdrive_grid_prive', 'gdrive_shortcode_grid_prive' );
 
@@ -34,7 +34,7 @@ add_shortcode( 'gdrive_grid_prive', 'gdrive_shortcode_grid_prive' );
 
 
 function gdrive_shortcode_pdf( $atts, $content = null ) {
-        return '<iframe src="https://docs.google.com/viewer?srcid=' . $content . '&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="100%" height="480px"></iframe>';
+    return '<iframe src="https://docs.google.com/viewer?srcid=' . $content . '&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="100%" height="480px"></iframe>';
 }
 
 
@@ -46,17 +46,17 @@ add_shortcode( 'gdrive_pdf', 'gdrive_shortcode_pdf' );
 
 function journal_shortcode( $atts ) {
 
-	// Attributes
-	extract( shortcode_atts(
-		array(
-			'repertoire' => '',
-			'fichier' => '',
-			'texte' => '',
-		), $atts )
-	);
+    // Attributes
+    extract( shortcode_atts(
+        array(
+            'repertoire' => '',
+            'fichier' => '',
+            'texte' => '',
+        ), $atts )
+           );
 
-	// Code
-return "<figure><a target='_blank' href='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".pdf'><img src ='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".jpg'><figcaption>".$texte."</figcaption></figure></a>";
+    // Code
+    return "<figure><a target='_blank' href='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".pdf'><img src ='http://www.nouvellequerbes.org/documents/journaux/".$repertoire."/".$fichier.".jpg'><figcaption>".$texte."</figcaption></figure></a>";
 
 
 }
@@ -67,37 +67,38 @@ add_shortcode( 'journal', 'journal_shortcode' );
 //Fonction pour lister les pages enfants
 
 function wpb_list_child_pages() {
-global $post;
-    
+    global $post;
 
-$childpages = wp_list_pages( 'sort_column=post_title&title_li=&child_of=' . $post->ID . '&echo=0' );
-if ( $childpages ) {
-    $string = '<ul>' . $childpages . '</ul>';
-}
-return $string;
+
+    $childpages = wp_list_pages( 'sort_column=post_title&title_li=&child_of=' . $post->ID . '&echo=0' );
+    if ( $childpages ) {
+        $string = '<ul>' . $childpages . '</ul>';
+    }
+    return $string;
 }
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 
 
 
-//Fonction pour lister les articles de la catégorie 26 (Service de garde)
+//Fonction pour lister les articles de la catégorie 23 (Service de garde)
 
-function listecdj(){
-query_posts('cat=26');
-if(have_posts()): while(have_posts()):the_post();
-
-			echo "<h6>";the_title();
-echo "</h6>";
-		echo "<div class='article-inside'>";
-				the_content();
-echo "</div>";
+function listesdg(){
 
 
 
-endwhile;
 
-endif; wp_reset_query();
+    $my_query = new WP_Query('cat=[23]&post_count=2&order=ASC');
+    while ($my_query->have_posts()) : $my_query->the_post();
+    echo "<h6>";the_title();
+    echo "</h6>";
+    echo "<div class='article-inside'>";
+    the_content();
+    echo "</div>";
+    endwhile;
+
+
+
 
 
 }
@@ -106,22 +107,22 @@ add_shortcode('sdg', 'listesdg');
 
 
 
-
+//Fonction pour lister les articles de la catégorie 4 (infoquerbes)
 function listeinfoquerbes(){		
-query_posts('cat=4'); 
-if(have_posts()): while(have_posts()):the_post();  
+    query_posts('cat=4');
+    if(have_posts()): while(have_posts()):the_post();
 
-			echo "<h6>";the_title();
-echo "</h6>";
-		echo "<div class='article-inside'>";
-				the_content();
-echo "</div>";
+    echo "<h6>";the_title();
+    echo "</h6>";
+    echo "<div class='article-inside'>";
+    the_content();
+    echo "</div>";
 
 
 
-endwhile; 
+    endwhile;
 
-endif; wp_reset_query(); 
+    endif; wp_reset_query();
 
 
 }
@@ -132,23 +133,23 @@ add_shortcode('infoquerbes', 'listeinfoquerbes');
 
 
 
-//Fonction pour lister les articles de la catégorie 4 (infoquerbes)
+//Fonction pour lister les articles de la catégorie 4 (cdj)
 
 function listecdj(){
-query_posts('cat=2');
-if(have_posts()): while(have_posts()):the_post();
+    query_posts('cat=4');
+    if(have_posts()): while(have_posts()):the_post();
 
-                        echo "<h6>";the_title();
-echo "</h6>";
-                echo "<div class='article-inside'>";
-                                the_content();
-echo "</div>";
+    echo "<h6>";the_title();
+    echo "</h6>";
+    echo "<div class='article-inside'>";
+    the_content();
+    echo "</div>";
 
 
 
-endwhile;
+    endwhile;
 
-endif; wp_reset_query();
+    endif; wp_reset_query();
 
 
 }
@@ -168,10 +169,10 @@ add_shortcode('mailto', 'cwc_mail_shortcode');
 
 
 function cacher_fct($atts, $content=null){
-session_start();
-$_SESSION['log']=1;
+    session_start();
+    $_SESSION['log']=1;
 
-if(is_user_logged_in()) return $content;
+    if(is_user_logged_in()) return $content;
 }
 
 add_shortcode('cacher','cacher_fct');
