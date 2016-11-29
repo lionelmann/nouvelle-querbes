@@ -81,7 +81,31 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 
 
-//Fonction pour lister les articles de la catégorie 4 (infoquerbes)
+//Fonction pour lister les articles de la catégorie 26 (Service de garde)
+
+function listecdj(){
+query_posts('cat=26');
+if(have_posts()): while(have_posts()):the_post();
+
+			echo "<h6>";the_title();
+echo "</h6>";
+		echo "<div class='article-inside'>";
+				the_content();
+echo "</div>";
+
+
+
+endwhile;
+
+endif; wp_reset_query();
+
+
+}
+
+add_shortcode('sdg', 'listesdg');
+
+
+
 
 function listeinfoquerbes(){		
 query_posts('cat=4'); 
@@ -103,7 +127,6 @@ endif; wp_reset_query();
 }
 
 add_shortcode('infoquerbes', 'listeinfoquerbes');
-
 
 
 
